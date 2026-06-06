@@ -28,7 +28,7 @@
 /// `import 'package:material_symbols_icons_flow/symbols.dart';`
 ///
 /// {@category Symbols}
-library symbols;
+library;
 
 import 'package:flutter/widgets.dart';
 export 'material_symbols_icons.dart';

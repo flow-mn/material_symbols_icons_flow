@@ -13,7 +13,7 @@
 ///  The data was derived from the official Material Symbols metadata file
 /// downloaded from `http://fonts.google.com/metadata/icons?incomplete=1&key=material_symbols`
 /// 
-library symbols;
+library;
 
 import 'dart:convert';
 

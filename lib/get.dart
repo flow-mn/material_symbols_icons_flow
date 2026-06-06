@@ -1,3 +1,4 @@
+// ignore_for_file: non_const_argument_for_const_parameter
 /// The [SymbolsGet] extension on [Symbols] adds a method to retrieve an icon based on its
 /// name and desired style variation.  It also provides a [values] getter providing
 /// an array of all available icon names.   Additionally it provides a [map] getter to
