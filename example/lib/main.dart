@@ -1,10 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:material_symbols_icons/symbols.dart';
-import 'package:material_symbols_icons/material_symbols_icons.dart';
-import 'package:material_symbols_icons/symbols_map.dart';
-import 'package:material_symbols_icons/material_symbols_metadata.dart';
+import 'package:material_symbols_icons_flow/symbols.dart';
+import 'package:material_symbols_icons_flow/material_symbols_icons.dart';
+import 'package:material_symbols_icons_flow/symbols_map.dart';
+import 'package:material_symbols_icons_flow/material_symbols_metadata.dart';
 import 'package:splittable_flexible_row/splittable_flexible_row.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';

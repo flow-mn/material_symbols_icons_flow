@@ -125,15 +125,15 @@ class MaterialSymbolsBase {
     // ignore: unused_local_variable
     var forceOutlinedTreeShake = const IconData(0xf88a,
         fontFamily: 'MaterialSymbolsOutlined',
-        fontPackage: 'material_symbols_icons');
+        fontPackage: 'material_symbols_icons_flow');
     // ignore: unused_local_variable
     var forceRoundedTreeShake = const IconData(0xf88a,
         fontFamily: 'MaterialSymbolsRounded',
-        fontPackage: 'material_symbols_icons');
+        fontPackage: 'material_symbols_icons_flow');
     // ignore: unused_local_variable
     var forceSharpTreeShake = const IconData(0xf88a,
         fontFamily: 'MaterialSymbolsSharp',
-        fontPackage: 'material_symbols_icons');
+        fontPackage: 'material_symbols_icons_flow');
   }
 }
 

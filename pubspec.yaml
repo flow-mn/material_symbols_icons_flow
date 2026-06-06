@@ -1,10 +1,10 @@
-name: material_symbols_icons
-description: Full flutter support for latest Google Material Symbols Icons.
+name: material_symbols_icons_flow
+description: Flow fork of material_symbols_icons — Google Material Symbols icons, patched for Flutter's final IconData. Tracks upstream.
 maintainer: Tim Maffett
 version: 4.2928.1
-homepage: https://github.com/timmaffett/material_symbols_icons
-repository: https://github.com/timmaffett/material_symbols_icons
-issue_tracker: https://github.com/timmaffett/material_symbols_icons/issues
+homepage: https://github.com/flow-mn/material_symbols_icons_flow
+repository: https://github.com/flow-mn/material_symbols_icons_flow
+issue_tracker: https://github.com/flow-mn/material_symbols_icons_flow/issues
 screenshots:
   - description: 'example flutter material symbols icon browser'
     path: media/example.png

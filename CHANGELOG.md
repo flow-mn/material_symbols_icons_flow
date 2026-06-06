@@ -1,3 +1,9 @@
+## 4.2928.1 (flow-mn fork)
+
+Fork of `material_symbols_icons` 4.2928.1 (upstream by Tim Maffett), renamed to
+`material_symbols_icons_flow` and patched for Flutter's `final IconData`. Icon set
+unchanged from upstream.
+
 # Changelog for Material Symbols Icons package
 
 ## 4.2928.1

@@ -5,8 +5,8 @@
 library;
 
 import 'package:flutter/widgets.dart';
-import 'package:material_symbols_icons/symbols.dart';
-import 'package:material_symbols_icons/iconname_to_unicode_map.dart';
+import 'package:material_symbols_icons_flow/symbols.dart';
+import 'package:material_symbols_icons_flow/iconname_to_unicode_map.dart';
 
 /// Available styles when calling [get] method of the [SymbolsGet] extension.
 enum SymbolStyle {
@@ -29,11 +29,11 @@ extension SymbolsGet on Symbols {
         materialSymbolsIconNameToUnicodeMap['question_mark']!;
     switch (style) {
       case SymbolStyle.rounded:
-        return IconData(codePoint, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons');
+        return IconData(codePoint, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
       case SymbolStyle.sharp:
-        return IconData(codePoint, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons');
+        return IconData(codePoint, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
       case SymbolStyle.outlined:
-        return IconData(codePoint, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons');
+        return IconData(codePoint, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
     }
   }
 

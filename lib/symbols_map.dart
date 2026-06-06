@@ -20,7 +20,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/widgets.dart';
-import 'package:material_symbols_icons/symbols.dart';
+import 'package:material_symbols_icons_flow/symbols.dart';
 
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: non_constant_identifier_names

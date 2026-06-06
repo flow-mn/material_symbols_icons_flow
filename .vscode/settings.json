@@ -1,24 +1,25 @@
 {
-    "cmake.sourceDirectory": "C:/src/material_symbols_icons/example/linux",
-    "cSpell.words": [
-        "fontinfo",
-        "iconname"
-    ],
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#0B342C",
-        "titleBar.activeBackground": "#0F483D",
-        "titleBar.activeForeground": "#F2FCFA",
-        "titleBar.inactiveBackground": "#0B332C",
-        "titleBar.inactiveForeground": "#F4FDFB",
-        "statusBar.background": "#0B332C",
-        "statusBar.foreground": "#F4FDFB",
-        "statusBar.debuggingBackground": "#0B332C",
-        "statusBar.debuggingForeground": "#F4FDFB",
-        "statusBar.noFolderBackground": "#0B332C",
-        "statusBar.noFolderForeground": "#F4FDFB"
-    },
-    "chat.tools.terminal.autoApprove": {
-        "mkdir": true,
-        "cp": true
-    }
+  "cmake.sourceDirectory": "C:/src/material_symbols_icons/example/linux",
+  "cSpell.words": [
+    "fontinfo",
+    "iconname"
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#0B342C",
+    "titleBar.activeBackground": "#0F483D",
+    "titleBar.activeForeground": "#F2FCFA",
+    "titleBar.inactiveBackground": "#0B332C",
+    "titleBar.inactiveForeground": "#F4FDFB",
+    "statusBar.background": "#0B332C",
+    "statusBar.foreground": "#F4FDFB",
+    "statusBar.debuggingBackground": "#0B332C",
+    "statusBar.debuggingForeground": "#F4FDFB",
+    "statusBar.noFolderBackground": "#0B332C",
+    "statusBar.noFolderForeground": "#F4FDFB"
+  },
+  "chat.tools.terminal.autoApprove": {
+    "mkdir": true,
+    "cp": true
+  },
+  "dart.flutterSdkPath": ".fvm/versions/stable"
 }

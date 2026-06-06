@@ -1,3 +1,11 @@
+> **flow-mn fork.** Fork of [`material_symbols_icons`](https://github.com/timmaffett/material_symbols_icons)
+> by Tim Maffett, republished as **`material_symbols_icons_flow`** and patched for
+> Flutter's `final IconData`. Licensed under Apache-2.0 (see `LICENSE`).
+> Changes vs upstream 4.2928.1: package renamed and every `fontPackage` updated to
+> `material_symbols_icons_flow`; icon set unchanged.
+
+---
+
 # Material Symbols Icons for Flutter
 
 [![pub package](https://img.shields.io/pub/v/material_symbols_icons.svg)](https://pub.dev/packages/material_symbols_icons)
