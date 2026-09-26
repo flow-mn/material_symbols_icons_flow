@@ -1,7 +1,7 @@
 > **flow-mn fork.** Fork of [`material_symbols_icons`](https://github.com/timmaffett/material_symbols_icons)
 > by Tim Maffett, republished as **`material_symbols_icons_flow`** and patched for
 > Flutter's `final IconData`. Licensed under Apache-2.0 (see `LICENSE`).
-> Changes vs upstream 4.2928.1: package renamed and every `fontPackage` updated to
+> Changes vs upstream 4.2960.0: package renamed and every `fontPackage` updated to
 > `material_symbols_icons_flow`; icon set unchanged.
 
 ---
@@ -15,7 +15,7 @@
 [![Pub Publisher](https://img.shields.io/pub/publisher/material_symbols_icons)](https://pub.dev/publishers/hiveright.tech/packages)
 
 
-### Using Official Material Symbols Icons variable fonts version 2.928 released 03/26/2026 from [material font repo](https://github.com/google/material-design-icons) with 4205 icons
+### Using Official Material Symbols Icons variable fonts version 2.960 released 07/16/2026 from [material font repo](https://github.com/google/material-design-icons) with 4264 icons
 
 Right-To-Left Language support has been added!  Auto mirroring of appropriate icons for Right-to-Left languages is now fully supported.
 
@@ -75,6 +75,18 @@ and then access the icons from the `Symbols` class.
 
 This class contains outlined, rounded and sharp versions of every icon.  You access them using `Symbols.iconname` (for the outlined version),
 and `Symbols.iconname_rounded` or `Symbols.iconname_sharp` for the rounded and sharp versions respectively.
+
+Flutter's icon tree shaker reduces each font to the icons your app uses, but only for a font with at least one icon
+left in the compiled app: a style you never use would otherwise ship in full (8 to 15 MB each). The package keeps one
+tiny icon of each style for you in native and `flutter build web --wasm` builds. For a JS-only web build
+(`flutter build web` without `--wasm`), call `Symbols.forceCompileTimeTreeShaking()` once, for example at the start of `main()`:
+
+```dart
+void main() {
+  Symbols.forceCompileTimeTreeShaking();
+  runApp(const MyApp());
+}
+```
 
 Additionally the Material Symbols [specification](https://docs.google.com/document/d/1UHRKDl8-lzl_hW_K2AHnpMwvdPo0vGPbDI7mqACWXJY/) document also specifies
 a Symbols.get(String name, SymbolStyle style) method that can be used to return the IconData for any icon using it's

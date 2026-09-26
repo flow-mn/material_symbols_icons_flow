@@ -12,7 +12,7 @@
 // https://github.com/google/material-design-icons/raw/master/variablefont/MaterialSymbolsRounded%5BFILL%2CGRAD%2Copsz%2Cwght%5D.ttf, and
 // https://github.com/google/material-design-icons/raw/master/variablefont/MaterialSymbolsSharp%5BFILL%2CGRAD%2Copsz%2Cwght%5D.ttf
 // and added to this package.
-// This file was generated 2026-03-31 14:19:17.360904 by the dart file
+// This file was generated 2026-07-23 07:36:57.683325 by the dart file
 // `generator/update_package.dart`.
 //
 // Copyright 2024. All rights reserved.
@@ -120,24 +120,28 @@ class Symbols {
   /// and it is being used to force the dart compilation process to believe that this
   /// method is required and that it CAN NOT tree-shake this method when it never
   /// finds a call to it in the dart source code.
+  /// `@pragma('wasm:entry-point')` does the same for dart2wasm (`flutter build web --wasm`).
+  /// dart2js has no equivalent: for JS-only web builds, call this method once, for example
+  /// at the start of `main()`.
   @pragma('vm:entry-point')
+  @pragma('wasm:entry-point')
   static void forceCompileTimeTreeShaking() {
-    // these variables must be declared as var to trigger tree shaking, when declared as const
-    // then the tree shaking is not triggered.  These are references to the 'check_indeterminate_small'
-    // icon in each of the fonts (one of the smallest glyphs we can include).
-    // ignore: unused_local_variable
-    var forceOutlinedTreeShake = const IconData(0xf88a,
-        fontFamily: 'MaterialSymbolsOutlined',
-        fontPackage: 'material_symbols_icons_flow');
-    // ignore: unused_local_variable
-    var forceRoundedTreeShake = const IconData(0xf88a,
-        fontFamily: 'MaterialSymbolsRounded',
-        fontPackage: 'material_symbols_icons_flow');
-    // ignore: unused_local_variable
-    var forceSharpTreeShake = const IconData(0xf88a,
-        fontFamily: 'MaterialSymbolsSharp',
-        fontPackage: 'material_symbols_icons_flow');
+    // 'check_indeterminate_small' in each of the fonts, one of the smallest glyphs.
+    _keepIcons(const [
+      IconData(0xf88a, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow'),
+      IconData(0xf88a, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow'),
+      IconData(0xf88a, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow'),
+    ]);
   }
+
+  /// Keeps [icons] in the compiled program. dart2js drops a constant only assigned
+  /// to an unused local, so the icons go through a call instead: the entry-point
+  /// pragmas stop the native and Wasm compilers from removing this unused parameter,
+  /// and `noInline` stops dart2js from inlining the call away.
+  @pragma('vm:entry-point')
+  @pragma('wasm:entry-point')
+  @pragma('dart2js:noInline')
+  static void _keepIcons(Object icons) {}
 
   // BEGIN GENERATED ICONS
 
@@ -429,6 +433,18 @@ class Symbols {
   static const IconData twod_sharp =
       IconData(0xef37, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![twod_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0e;%3C/text%3E%3C/svg%3E)  material symbols icon named "twod_2" (outlined variation).
+  static const IconData twod_2 =
+      IconData(0xfff0e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![twod_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0e;%3C/text%3E%3C/svg%3E)  material symbols icon named "twod_2_rounded" (rounded variation).
+  static const IconData twod_2_rounded =
+      IconData(0xfff0e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![twod_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0e;%3C/text%3E%3C/svg%3E)  material symbols icon named "twod_2_sharp" (sharp variation).
+  static const IconData twod_2_sharp =
+      IconData(0xfff0e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![two_k](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe963;%3C/text%3E%3C/svg%3E)  material symbols icon named "two_k" (outlined variation).
   static const IconData two_k =
       IconData(0xe963, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -512,6 +528,18 @@ class Symbols {
   ///  ![threed_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xed38;%3C/text%3E%3C/svg%3E)  material symbols icon named "threed_sharp" (sharp variation).
   static const IconData threed_sharp =
       IconData(0xed38, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![threed_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0f;%3C/text%3E%3C/svg%3E)  material symbols icon named "threed_2" (outlined variation).
+  static const IconData threed_2 =
+      IconData(0xfff0f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![threed_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0f;%3C/text%3E%3C/svg%3E)  material symbols icon named "threed_2_rounded" (rounded variation).
+  static const IconData threed_2_rounded =
+      IconData(0xfff0f, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![threed_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0f;%3C/text%3E%3C/svg%3E)  material symbols icon named "threed_2_sharp" (sharp variation).
+  static const IconData threed_2_sharp =
+      IconData(0xfff0f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![threed_rotation](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe84d;%3C/text%3E%3C/svg%3E)  material symbols icon named "threed_rotation" (outlined variation).
   static const IconData threed_rotation =
@@ -1437,29 +1465,29 @@ class Symbols {
   static const IconData add_chart_sharp =
       IconData(0xef3c, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![add_circle](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3ba;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle" (outlined variation).
+  ///  ![add_circle](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe990;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle" (outlined variation).
   static const IconData add_circle =
-      IconData(0xe3ba, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe990, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![add_circle_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3ba;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle_rounded" (rounded variation).
+  ///  ![add_circle_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe990;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle_rounded" (rounded variation).
   static const IconData add_circle_rounded =
-      IconData(0xe3ba, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe990, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![add_circle_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3ba;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle_sharp" (sharp variation).
+  ///  ![add_circle_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe990;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle_sharp" (sharp variation).
   static const IconData add_circle_sharp =
-      IconData(0xe3ba, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe990, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![add_circle_outline](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3ba;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle_outline" (outlined variation).
+  ///  ![add_circle_outline](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe990;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle_outline" (outlined variation).
   static const IconData add_circle_outline =
-      IconData(0xe3ba, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe990, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![add_circle_outline_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3ba;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle_outline_rounded" (rounded variation).
+  ///  ![add_circle_outline_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe990;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle_outline_rounded" (rounded variation).
   static const IconData add_circle_outline_rounded =
-      IconData(0xe3ba, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe990, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![add_circle_outline_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3ba;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle_outline_sharp" (sharp variation).
+  ///  ![add_circle_outline_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe990;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_circle_outline_sharp" (sharp variation).
   static const IconData add_circle_outline_sharp =
-      IconData(0xe3ba, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe990, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![add_column_left](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf425;%3C/text%3E%3C/svg%3E)  material symbols icon named "add_column_left" (outlined variation).
   static const IconData add_column_left =
@@ -3407,15 +3435,15 @@ class Symbols {
 
   ///  ![arrow_back_ios_new](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe2ea;%3C/text%3E%3C/svg%3E)  material symbols icon named "arrow_back_ios_new" (outlined variation).
   static const IconData arrow_back_ios_new =
-      IconData(0xe2ea, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe2ea, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![arrow_back_ios_new_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe2ea;%3C/text%3E%3C/svg%3E)  material symbols icon named "arrow_back_ios_new_rounded" (rounded variation).
   static const IconData arrow_back_ios_new_rounded =
-      IconData(0xe2ea, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe2ea, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![arrow_back_ios_new_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe2ea;%3C/text%3E%3C/svg%3E)  material symbols icon named "arrow_back_ios_new_sharp" (sharp variation).
   static const IconData arrow_back_ios_new_sharp =
-      IconData(0xe2ea, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe2ea, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![arrow_circle_down](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf181;%3C/text%3E%3C/svg%3E)  material symbols icon named "arrow_circle_down" (outlined variation).
   static const IconData arrow_circle_down =
@@ -3921,17 +3949,17 @@ class Symbols {
   static const IconData art_track_sharp =
       IconData(0xe060, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![article](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef42;%3C/text%3E%3C/svg%3E)  material symbols icon named "article" (outlined variation).
+  ///  ![article](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef87;%3C/text%3E%3C/svg%3E)  material symbols icon named "article" (outlined variation).
   static const IconData article =
-      IconData(0xef42, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xef87, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![article_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef42;%3C/text%3E%3C/svg%3E)  material symbols icon named "article_rounded" (rounded variation).
+  ///  ![article_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef87;%3C/text%3E%3C/svg%3E)  material symbols icon named "article_rounded" (rounded variation).
   static const IconData article_rounded =
-      IconData(0xef42, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xef87, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![article_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef42;%3C/text%3E%3C/svg%3E)  material symbols icon named "article_sharp" (sharp variation).
+  ///  ![article_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef87;%3C/text%3E%3C/svg%3E)  material symbols icon named "article_sharp" (sharp variation).
   static const IconData article_sharp =
-      IconData(0xef42, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xef87, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![article_person](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf368;%3C/text%3E%3C/svg%3E)  material symbols icon named "article_person" (outlined variation).
   static const IconData article_person =
@@ -4163,15 +4191,15 @@ class Symbols {
 
   ///  ![assistant_photo](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "assistant_photo" (outlined variation).
   static const IconData assistant_photo =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![assistant_photo_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "assistant_photo_rounded" (rounded variation).
   static const IconData assistant_photo_rounded =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![assistant_photo_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "assistant_photo_sharp" (sharp variation).
   static const IconData assistant_photo_sharp =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![assured_workload](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xeb6f;%3C/text%3E%3C/svg%3E)  material symbols icon named "assured_workload" (outlined variation).
   static const IconData assured_workload =
@@ -4340,6 +4368,18 @@ class Symbols {
   ///  ![attribution_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xefdb;%3C/text%3E%3C/svg%3E)  material symbols icon named "attribution_sharp" (sharp variation).
   static const IconData attribution_sharp =
       IconData(0xefdb, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![audio_capture](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff03;%3C/text%3E%3C/svg%3E)  material symbols icon named "audio_capture" (outlined variation).
+  static const IconData audio_capture =
+      IconData(0xfff03, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![audio_capture_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff03;%3C/text%3E%3C/svg%3E)  material symbols icon named "audio_capture_rounded" (rounded variation).
+  static const IconData audio_capture_rounded =
+      IconData(0xfff03, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![audio_capture_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff03;%3C/text%3E%3C/svg%3E)  material symbols icon named "audio_capture_sharp" (sharp variation).
+  static const IconData audio_capture_sharp =
+      IconData(0xfff03, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![audio_description](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf58c;%3C/text%3E%3C/svg%3E)  material symbols icon named "audio_description" (outlined variation).
   static const IconData audio_description =
@@ -5829,6 +5869,18 @@ class Symbols {
   static const IconData battery_charging_20_sharp =
       IconData(0xf0a2, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![battery_charging_20_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3e;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_20_2" (outlined variation).
+  static const IconData battery_charging_20_2 =
+      IconData(0xfff3e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_20_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3e;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_20_2_rounded" (rounded variation).
+  static const IconData battery_charging_20_2_rounded =
+      IconData(0xfff3e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_20_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3e;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_20_2_sharp" (sharp variation).
+  static const IconData battery_charging_20_2_sharp =
+      IconData(0xfff3e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![battery_charging_30](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0a3;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_30" (outlined variation).
   static const IconData battery_charging_30 =
       IconData(0xf0a3, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -5840,6 +5892,18 @@ class Symbols {
   ///  ![battery_charging_30_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0a3;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_30_sharp" (sharp variation).
   static const IconData battery_charging_30_sharp =
       IconData(0xf0a3, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_30_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3d;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_30_2" (outlined variation).
+  static const IconData battery_charging_30_2 =
+      IconData(0xfff3d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_30_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3d;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_30_2_rounded" (rounded variation).
+  static const IconData battery_charging_30_2_rounded =
+      IconData(0xfff3d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_30_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3d;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_30_2_sharp" (sharp variation).
+  static const IconData battery_charging_30_2_sharp =
+      IconData(0xfff3d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![battery_charging_50](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0a4;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_50" (outlined variation).
   static const IconData battery_charging_50 =
@@ -5853,6 +5917,18 @@ class Symbols {
   static const IconData battery_charging_50_sharp =
       IconData(0xf0a4, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![battery_charging_50_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3c;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_50_2" (outlined variation).
+  static const IconData battery_charging_50_2 =
+      IconData(0xfff3c, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_50_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3c;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_50_2_rounded" (rounded variation).
+  static const IconData battery_charging_50_2_rounded =
+      IconData(0xfff3c, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_50_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3c;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_50_2_sharp" (sharp variation).
+  static const IconData battery_charging_50_2_sharp =
+      IconData(0xfff3c, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![battery_charging_60](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0a5;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_60" (outlined variation).
   static const IconData battery_charging_60 =
       IconData(0xf0a5, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -5865,6 +5941,18 @@ class Symbols {
   static const IconData battery_charging_60_sharp =
       IconData(0xf0a5, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![battery_charging_60_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3b;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_60_2" (outlined variation).
+  static const IconData battery_charging_60_2 =
+      IconData(0xfff3b, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_60_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3b;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_60_2_rounded" (rounded variation).
+  static const IconData battery_charging_60_2_rounded =
+      IconData(0xfff3b, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_60_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3b;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_60_2_sharp" (sharp variation).
+  static const IconData battery_charging_60_2_sharp =
+      IconData(0xfff3b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![battery_charging_80](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0a6;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_80" (outlined variation).
   static const IconData battery_charging_80 =
       IconData(0xf0a6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -5876,6 +5964,18 @@ class Symbols {
   ///  ![battery_charging_80_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0a6;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_80_sharp" (sharp variation).
   static const IconData battery_charging_80_sharp =
       IconData(0xf0a6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_80_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3a;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_80_2" (outlined variation).
+  static const IconData battery_charging_80_2 =
+      IconData(0xfff3a, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_80_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3a;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_80_2_rounded" (rounded variation).
+  static const IconData battery_charging_80_2_rounded =
+      IconData(0xfff3a, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_80_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff3a;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_80_2_sharp" (sharp variation).
+  static const IconData battery_charging_80_2_sharp =
+      IconData(0xfff3a, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![battery_charging_90](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0a7;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_90" (outlined variation).
   static const IconData battery_charging_90 =
@@ -5900,6 +6000,18 @@ class Symbols {
   ///  ![battery_charging_full_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe1a3;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_full_sharp" (sharp variation).
   static const IconData battery_charging_full_sharp =
       IconData(0xe1a3, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_full_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff39;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_full_2" (outlined variation).
+  static const IconData battery_charging_full_2 =
+      IconData(0xfff39, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_full_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff39;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_full_2_rounded" (rounded variation).
+  static const IconData battery_charging_full_2_rounded =
+      IconData(0xfff39, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![battery_charging_full_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff39;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_charging_full_2_sharp" (sharp variation).
+  static const IconData battery_charging_full_2_sharp =
+      IconData(0xfff39, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![battery_error](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf7ea;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_error" (outlined variation).
   static const IconData battery_error =
@@ -6059,15 +6171,15 @@ class Symbols {
 
   ///  ![battery_unknown](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe1a6;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_unknown" (outlined variation).
   static const IconData battery_unknown =
-      IconData(0xe1a6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe1a6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![battery_unknown_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe1a6;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_unknown_rounded" (rounded variation).
   static const IconData battery_unknown_rounded =
-      IconData(0xe1a6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe1a6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![battery_unknown_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe1a6;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_unknown_sharp" (sharp variation).
   static const IconData battery_unknown_sharp =
-      IconData(0xe1a6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe1a6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![battery_vert_005](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf8b1;%3C/text%3E%3C/svg%3E)  material symbols icon named "battery_vert_005" (outlined variation).
   static const IconData battery_vert_005 =
@@ -6299,15 +6411,15 @@ class Symbols {
 
   ///  ![bike_lane](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf47a;%3C/text%3E%3C/svg%3E)  material symbols icon named "bike_lane" (outlined variation).
   static const IconData bike_lane =
-      IconData(0xf47a, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf47a, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![bike_lane_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf47a;%3C/text%3E%3C/svg%3E)  material symbols icon named "bike_lane_rounded" (rounded variation).
   static const IconData bike_lane_rounded =
-      IconData(0xf47a, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf47a, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![bike_lane_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf47a;%3C/text%3E%3C/svg%3E)  material symbols icon named "bike_lane_sharp" (sharp variation).
   static const IconData bike_lane_sharp =
-      IconData(0xf47a, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf47a, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![bike_scooter](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef45;%3C/text%3E%3C/svg%3E)  material symbols icon named "bike_scooter" (outlined variation).
   static const IconData bike_scooter =
@@ -6380,6 +6492,30 @@ class Symbols {
   ///  ![blinds_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe286;%3C/text%3E%3C/svg%3E)  material symbols icon named "blinds_sharp" (sharp variation).
   static const IconData blinds_sharp =
       IconData(0xe286, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![blinds_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff78;%3C/text%3E%3C/svg%3E)  material symbols icon named "blinds_2" (outlined variation).
+  static const IconData blinds_2 =
+      IconData(0xfff78, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![blinds_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff78;%3C/text%3E%3C/svg%3E)  material symbols icon named "blinds_2_rounded" (rounded variation).
+  static const IconData blinds_2_rounded =
+      IconData(0xfff78, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![blinds_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff78;%3C/text%3E%3C/svg%3E)  material symbols icon named "blinds_2_sharp" (sharp variation).
+  static const IconData blinds_2_sharp =
+      IconData(0xfff78, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![blinds_2_closed](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff79;%3C/text%3E%3C/svg%3E)  material symbols icon named "blinds_2_closed" (outlined variation).
+  static const IconData blinds_2_closed =
+      IconData(0xfff79, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![blinds_2_closed_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff79;%3C/text%3E%3C/svg%3E)  material symbols icon named "blinds_2_closed_rounded" (rounded variation).
+  static const IconData blinds_2_closed_rounded =
+      IconData(0xfff79, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![blinds_2_closed_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff79;%3C/text%3E%3C/svg%3E)  material symbols icon named "blinds_2_closed_sharp" (sharp variation).
+  static const IconData blinds_2_closed_sharp =
+      IconData(0xfff79, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![blinds_closed](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xec1f;%3C/text%3E%3C/svg%3E)  material symbols icon named "blinds_closed" (outlined variation).
   static const IconData blinds_closed =
@@ -6632,6 +6768,18 @@ class Symbols {
   ///  ![bolt_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xea0b;%3C/text%3E%3C/svg%3E)  material symbols icon named "bolt_sharp" (sharp variation).
   static const IconData bolt_sharp =
       IconData(0xea0b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![bolt_boost](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6a;%3C/text%3E%3C/svg%3E)  material symbols icon named "bolt_boost" (outlined variation).
+  static const IconData bolt_boost =
+      IconData(0xfff6a, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![bolt_boost_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6a;%3C/text%3E%3C/svg%3E)  material symbols icon named "bolt_boost_rounded" (rounded variation).
+  static const IconData bolt_boost_rounded =
+      IconData(0xfff6a, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![bolt_boost_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6a;%3C/text%3E%3C/svg%3E)  material symbols icon named "bolt_boost_sharp" (sharp variation).
+  static const IconData bolt_boost_sharp =
+      IconData(0xfff6a, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![bomb](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf568;%3C/text%3E%3C/svg%3E)  material symbols icon named "bomb" (outlined variation).
   static const IconData bomb =
@@ -7223,15 +7371,15 @@ class Symbols {
 
   ///  ![branding_watermark](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe06b;%3C/text%3E%3C/svg%3E)  material symbols icon named "branding_watermark" (outlined variation).
   static const IconData branding_watermark =
-      IconData(0xe06b, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe06b, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![branding_watermark_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe06b;%3C/text%3E%3C/svg%3E)  material symbols icon named "branding_watermark_rounded" (rounded variation).
   static const IconData branding_watermark_rounded =
-      IconData(0xe06b, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe06b, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![branding_watermark_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe06b;%3C/text%3E%3C/svg%3E)  material symbols icon named "branding_watermark_sharp" (sharp variation).
   static const IconData branding_watermark_sharp =
-      IconData(0xe06b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe06b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![breakfast_dining](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xea54;%3C/text%3E%3C/svg%3E)  material symbols icon named "breakfast_dining" (outlined variation).
   static const IconData breakfast_dining =
@@ -8613,6 +8761,18 @@ class Symbols {
   static const IconData car_fan_recirculate_sharp =
       IconData(0xf338, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![car_fan_recirculate_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff40;%3C/text%3E%3C/svg%3E)  material symbols icon named "car_fan_recirculate_2" (outlined variation).
+  static const IconData car_fan_recirculate_2 =
+      IconData(0xfff40, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![car_fan_recirculate_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff40;%3C/text%3E%3C/svg%3E)  material symbols icon named "car_fan_recirculate_2_rounded" (rounded variation).
+  static const IconData car_fan_recirculate_2_rounded =
+      IconData(0xfff40, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![car_fan_recirculate_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff40;%3C/text%3E%3C/svg%3E)  material symbols icon named "car_fan_recirculate_2_sharp" (sharp variation).
+  static const IconData car_fan_recirculate_2_sharp =
+      IconData(0xfff40, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![car_gear](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf337;%3C/text%3E%3C/svg%3E)  material symbols icon named "car_gear" (outlined variation).
   static const IconData car_gear =
       IconData(0xf337, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -8937,17 +9097,17 @@ class Symbols {
   static const IconData castle_sharp =
       IconData(0xeab1, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![category](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe574;%3C/text%3E%3C/svg%3E)  material symbols icon named "category" (outlined variation).
+  ///  ![category](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe72c;%3C/text%3E%3C/svg%3E)  material symbols icon named "category" (outlined variation).
   static const IconData category =
-      IconData(0xe574, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe72c, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![category_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe574;%3C/text%3E%3C/svg%3E)  material symbols icon named "category_rounded" (rounded variation).
+  ///  ![category_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe72c;%3C/text%3E%3C/svg%3E)  material symbols icon named "category_rounded" (rounded variation).
   static const IconData category_rounded =
-      IconData(0xe574, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe72c, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![category_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe574;%3C/text%3E%3C/svg%3E)  material symbols icon named "category_sharp" (sharp variation).
+  ///  ![category_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe72c;%3C/text%3E%3C/svg%3E)  material symbols icon named "category_sharp" (sharp variation).
   static const IconData category_sharp =
-      IconData(0xe574, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe72c, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![category_search](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf437;%3C/text%3E%3C/svg%3E)  material symbols icon named "category_search" (outlined variation).
   static const IconData category_search =
@@ -9297,17 +9457,17 @@ class Symbols {
   static const IconData chat_paste_go_2_sharp =
       IconData(0xf3cb, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![check](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe5ca;%3C/text%3E%3C/svg%3E)  material symbols icon named "check" (outlined variation).
+  ///  ![check](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe668;%3C/text%3E%3C/svg%3E)  material symbols icon named "check" (outlined variation).
   static const IconData check =
-      IconData(0xe5ca, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe668, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![check_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe5ca;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_rounded" (rounded variation).
+  ///  ![check_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe668;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_rounded" (rounded variation).
   static const IconData check_rounded =
-      IconData(0xe5ca, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe668, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![check_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe5ca;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_sharp" (sharp variation).
+  ///  ![check_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe668;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_sharp" (sharp variation).
   static const IconData check_sharp =
-      IconData(0xe5ca, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe668, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![check_alert](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff85;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_alert" (outlined variation).
   static const IconData check_alert =
@@ -9321,17 +9481,17 @@ class Symbols {
   static const IconData check_alert_sharp =
       IconData(0xfff85, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![check_box](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe834;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_box" (outlined variation).
+  ///  ![check_box](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe9de;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_box" (outlined variation).
   static const IconData check_box =
-      IconData(0xe834, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe9de, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![check_box_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe834;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_box_rounded" (rounded variation).
+  ///  ![check_box_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe9de;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_box_rounded" (rounded variation).
   static const IconData check_box_rounded =
-      IconData(0xe834, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe9de, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![check_box_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe834;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_box_sharp" (sharp variation).
+  ///  ![check_box_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe9de;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_box_sharp" (sharp variation).
   static const IconData check_box_sharp =
-      IconData(0xe834, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe9de, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![check_box_outline_blank](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe835;%3C/text%3E%3C/svg%3E)  material symbols icon named "check_box_outline_blank" (outlined variation).
   static const IconData check_box_outline_blank =
@@ -9717,17 +9877,17 @@ class Symbols {
   static const IconData child_care_sharp =
       IconData(0xeb41, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![child_friendly](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xeb42;%3C/text%3E%3C/svg%3E)  material symbols icon named "child_friendly" (outlined variation).
+  ///  ![child_friendly](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef80;%3C/text%3E%3C/svg%3E)  material symbols icon named "child_friendly" (outlined variation).
   static const IconData child_friendly =
-      IconData(0xeb42, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xef80, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![child_friendly_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xeb42;%3C/text%3E%3C/svg%3E)  material symbols icon named "child_friendly_rounded" (rounded variation).
+  ///  ![child_friendly_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef80;%3C/text%3E%3C/svg%3E)  material symbols icon named "child_friendly_rounded" (rounded variation).
   static const IconData child_friendly_rounded =
-      IconData(0xeb42, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xef80, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![child_friendly_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xeb42;%3C/text%3E%3C/svg%3E)  material symbols icon named "child_friendly_sharp" (sharp variation).
+  ///  ![child_friendly_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef80;%3C/text%3E%3C/svg%3E)  material symbols icon named "child_friendly_sharp" (sharp variation).
   static const IconData child_friendly_sharp =
-      IconData(0xeb42, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xef80, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![child_hat](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef30;%3C/text%3E%3C/svg%3E)  material symbols icon named "child_hat" (outlined variation).
   static const IconData child_hat =
@@ -11051,27 +11211,27 @@ class Symbols {
 
   ///  ![content_copy](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe14d;%3C/text%3E%3C/svg%3E)  material symbols icon named "content_copy" (outlined variation).
   static const IconData content_copy =
-      IconData(0xe14d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe14d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![content_copy_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe14d;%3C/text%3E%3C/svg%3E)  material symbols icon named "content_copy_rounded" (rounded variation).
   static const IconData content_copy_rounded =
-      IconData(0xe14d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe14d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![content_copy_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe14d;%3C/text%3E%3C/svg%3E)  material symbols icon named "content_copy_sharp" (sharp variation).
   static const IconData content_copy_sharp =
-      IconData(0xe14d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe14d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![content_cut](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe14e;%3C/text%3E%3C/svg%3E)  material symbols icon named "content_cut" (outlined variation).
   static const IconData content_cut =
-      IconData(0xe14e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe14e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![content_cut_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe14e;%3C/text%3E%3C/svg%3E)  material symbols icon named "content_cut_rounded" (rounded variation).
   static const IconData content_cut_rounded =
-      IconData(0xe14e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe14e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![content_cut_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe14e;%3C/text%3E%3C/svg%3E)  material symbols icon named "content_cut_sharp" (sharp variation).
   static const IconData content_cut_sharp =
-      IconData(0xe14e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe14e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![content_paste](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe14f;%3C/text%3E%3C/svg%3E)  material symbols icon named "content_paste" (outlined variation).
   static const IconData content_paste =
@@ -11183,15 +11343,15 @@ class Symbols {
 
   ///  ![contrast](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xeb37;%3C/text%3E%3C/svg%3E)  material symbols icon named "contrast" (outlined variation).
   static const IconData contrast =
-      IconData(0xeb37, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xeb37, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![contrast_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xeb37;%3C/text%3E%3C/svg%3E)  material symbols icon named "contrast_rounded" (rounded variation).
   static const IconData contrast_rounded =
-      IconData(0xeb37, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xeb37, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![contrast_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xeb37;%3C/text%3E%3C/svg%3E)  material symbols icon named "contrast_sharp" (sharp variation).
   static const IconData contrast_sharp =
-      IconData(0xeb37, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xeb37, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![contrast_circle](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf49f;%3C/text%3E%3C/svg%3E)  material symbols icon named "contrast_circle" (outlined variation).
   static const IconData contrast_circle =
@@ -11241,17 +11401,17 @@ class Symbols {
   static const IconData control_camera_sharp =
       IconData(0xe074, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![control_point](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3ba;%3C/text%3E%3C/svg%3E)  material symbols icon named "control_point" (outlined variation).
+  ///  ![control_point](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe990;%3C/text%3E%3C/svg%3E)  material symbols icon named "control_point" (outlined variation).
   static const IconData control_point =
-      IconData(0xe3ba, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe990, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![control_point_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3ba;%3C/text%3E%3C/svg%3E)  material symbols icon named "control_point_rounded" (rounded variation).
+  ///  ![control_point_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe990;%3C/text%3E%3C/svg%3E)  material symbols icon named "control_point_rounded" (rounded variation).
   static const IconData control_point_rounded =
-      IconData(0xe3ba, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe990, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![control_point_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3ba;%3C/text%3E%3C/svg%3E)  material symbols icon named "control_point_sharp" (sharp variation).
+  ///  ![control_point_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe990;%3C/text%3E%3C/svg%3E)  material symbols icon named "control_point_sharp" (sharp variation).
   static const IconData control_point_sharp =
-      IconData(0xe3ba, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe990, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![control_point_duplicate](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3bb;%3C/text%3E%3C/svg%3E)  material symbols icon named "control_point_duplicate" (outlined variation).
   static const IconData control_point_duplicate =
@@ -11721,6 +11881,30 @@ class Symbols {
   static const IconData crop_16_9_sharp =
       IconData(0xe3bc, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![crop_21_9](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0a;%3C/text%3E%3C/svg%3E)  material symbols icon named "crop_21_9" (outlined variation).
+  static const IconData crop_21_9 =
+      IconData(0xfff0a, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![crop_21_9_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0a;%3C/text%3E%3C/svg%3E)  material symbols icon named "crop_21_9_rounded" (rounded variation).
+  static const IconData crop_21_9_rounded =
+      IconData(0xfff0a, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![crop_21_9_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0a;%3C/text%3E%3C/svg%3E)  material symbols icon named "crop_21_9_sharp" (sharp variation).
+  static const IconData crop_21_9_sharp =
+      IconData(0xfff0a, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![crop_2_3](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0b;%3C/text%3E%3C/svg%3E)  material symbols icon named "crop_2_3" (outlined variation).
+  static const IconData crop_2_3 =
+      IconData(0xfff0b, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![crop_2_3_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0b;%3C/text%3E%3C/svg%3E)  material symbols icon named "crop_2_3_rounded" (rounded variation).
+  static const IconData crop_2_3_rounded =
+      IconData(0xfff0b, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![crop_2_3_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0b;%3C/text%3E%3C/svg%3E)  material symbols icon named "crop_2_3_sharp" (sharp variation).
+  static const IconData crop_2_3_sharp =
+      IconData(0xfff0b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![crop_3_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3bd;%3C/text%3E%3C/svg%3E)  material symbols icon named "crop_3_2" (outlined variation).
   static const IconData crop_3_2 =
       IconData(0xe3bd, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -12164,6 +12348,18 @@ class Symbols {
   ///  ![dashboard_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf3ea;%3C/text%3E%3C/svg%3E)  material symbols icon named "dashboard_2_sharp" (sharp variation).
   static const IconData dashboard_2_sharp =
       IconData(0xf3ea, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![dashboard_2_add](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee9;%3C/text%3E%3C/svg%3E)  material symbols icon named "dashboard_2_add" (outlined variation).
+  static const IconData dashboard_2_add =
+      IconData(0xffee9, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![dashboard_2_add_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee9;%3C/text%3E%3C/svg%3E)  material symbols icon named "dashboard_2_add_rounded" (rounded variation).
+  static const IconData dashboard_2_add_rounded =
+      IconData(0xffee9, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![dashboard_2_add_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee9;%3C/text%3E%3C/svg%3E)  material symbols icon named "dashboard_2_add_sharp" (sharp variation).
+  static const IconData dashboard_2_add_sharp =
+      IconData(0xffee9, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![dashboard_2_edit](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfffd7;%3C/text%3E%3C/svg%3E)  material symbols icon named "dashboard_2_edit" (outlined variation).
   static const IconData dashboard_2_edit =
@@ -12839,27 +13035,27 @@ class Symbols {
 
   ///  ![desktop_landscape](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45e;%3C/text%3E%3C/svg%3E)  material symbols icon named "desktop_landscape" (outlined variation).
   static const IconData desktop_landscape =
-      IconData(0xf45e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![desktop_landscape_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45e;%3C/text%3E%3C/svg%3E)  material symbols icon named "desktop_landscape_rounded" (rounded variation).
   static const IconData desktop_landscape_rounded =
-      IconData(0xf45e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![desktop_landscape_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45e;%3C/text%3E%3C/svg%3E)  material symbols icon named "desktop_landscape_sharp" (sharp variation).
   static const IconData desktop_landscape_sharp =
-      IconData(0xf45e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![desktop_landscape_add](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf439;%3C/text%3E%3C/svg%3E)  material symbols icon named "desktop_landscape_add" (outlined variation).
   static const IconData desktop_landscape_add =
-      IconData(0xf439, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf439, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![desktop_landscape_add_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf439;%3C/text%3E%3C/svg%3E)  material symbols icon named "desktop_landscape_add_rounded" (rounded variation).
   static const IconData desktop_landscape_add_rounded =
-      IconData(0xf439, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf439, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![desktop_landscape_add_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf439;%3C/text%3E%3C/svg%3E)  material symbols icon named "desktop_landscape_add_sharp" (sharp variation).
   static const IconData desktop_landscape_add_sharp =
-      IconData(0xf439, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf439, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![desktop_mac](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe30b;%3C/text%3E%3C/svg%3E)  material symbols icon named "desktop_mac" (outlined variation).
   static const IconData desktop_mac =
@@ -12875,15 +13071,15 @@ class Symbols {
 
   ///  ![desktop_portrait](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45d;%3C/text%3E%3C/svg%3E)  material symbols icon named "desktop_portrait" (outlined variation).
   static const IconData desktop_portrait =
-      IconData(0xf45d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![desktop_portrait_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45d;%3C/text%3E%3C/svg%3E)  material symbols icon named "desktop_portrait_rounded" (rounded variation).
   static const IconData desktop_portrait_rounded =
-      IconData(0xf45d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![desktop_portrait_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45d;%3C/text%3E%3C/svg%3E)  material symbols icon named "desktop_portrait_sharp" (sharp variation).
   static const IconData desktop_portrait_sharp =
-      IconData(0xf45d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![desktop_windows](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe30c;%3C/text%3E%3C/svg%3E)  material symbols icon named "desktop_windows" (outlined variation).
   static const IconData desktop_windows =
@@ -13199,15 +13395,15 @@ class Symbols {
 
   ///  ![devices_other](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe337;%3C/text%3E%3C/svg%3E)  material symbols icon named "devices_other" (outlined variation).
   static const IconData devices_other =
-      IconData(0xe337, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe337, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![devices_other_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe337;%3C/text%3E%3C/svg%3E)  material symbols icon named "devices_other_rounded" (rounded variation).
   static const IconData devices_other_rounded =
-      IconData(0xe337, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe337, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![devices_other_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe337;%3C/text%3E%3C/svg%3E)  material symbols icon named "devices_other_sharp" (sharp variation).
   static const IconData devices_other_sharp =
-      IconData(0xe337, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe337, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![devices_wearables](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf6ab;%3C/text%3E%3C/svg%3E)  material symbols icon named "devices_wearables" (outlined variation).
   static const IconData devices_wearables =
@@ -13247,15 +13443,15 @@ class Symbols {
 
   ///  ![diagonal_line](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf41e;%3C/text%3E%3C/svg%3E)  material symbols icon named "diagonal_line" (outlined variation).
   static const IconData diagonal_line =
-      IconData(0xf41e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf41e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![diagonal_line_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf41e;%3C/text%3E%3C/svg%3E)  material symbols icon named "diagonal_line_rounded" (rounded variation).
   static const IconData diagonal_line_rounded =
-      IconData(0xf41e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf41e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![diagonal_line_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf41e;%3C/text%3E%3C/svg%3E)  material symbols icon named "diagonal_line_sharp" (sharp variation).
   static const IconData diagonal_line_sharp =
-      IconData(0xf41e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf41e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![dialer_sip](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe0bb;%3C/text%3E%3C/svg%3E)  material symbols icon named "dialer_sip" (outlined variation).
   static const IconData dialer_sip =
@@ -14409,17 +14605,17 @@ class Symbols {
   static const IconData downloading_sharp =
       IconData(0xf001, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![draft](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe66d;%3C/text%3E%3C/svg%3E)  material symbols icon named "draft" (outlined variation).
+  ///  ![draft](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe674;%3C/text%3E%3C/svg%3E)  material symbols icon named "draft" (outlined variation).
   static const IconData draft =
-      IconData(0xe66d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe674, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![draft_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe66d;%3C/text%3E%3C/svg%3E)  material symbols icon named "draft_rounded" (rounded variation).
+  ///  ![draft_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe674;%3C/text%3E%3C/svg%3E)  material symbols icon named "draft_rounded" (rounded variation).
   static const IconData draft_rounded =
-      IconData(0xe66d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe674, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![draft_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe66d;%3C/text%3E%3C/svg%3E)  material symbols icon named "draft_sharp" (sharp variation).
+  ///  ![draft_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe674;%3C/text%3E%3C/svg%3E)  material symbols icon named "draft_sharp" (sharp variation).
   static const IconData draft_sharp =
-      IconData(0xe66d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe674, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![draft_orders](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe7b3;%3C/text%3E%3C/svg%3E)  material symbols icon named "draft_orders" (outlined variation).
   static const IconData draft_orders =
@@ -14613,6 +14809,18 @@ class Symbols {
   static const IconData drive_file_move_rtl_sharp =
       IconData(0xe9a1, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
+  ///  ![drive_file_rename](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe676;%3C/text%3E%3C/svg%3E)  material symbols icon named "drive_file_rename" (outlined variation).
+  static const IconData drive_file_rename =
+      IconData(0xe676, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![drive_file_rename_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe676;%3C/text%3E%3C/svg%3E)  material symbols icon named "drive_file_rename_rounded" (rounded variation).
+  static const IconData drive_file_rename_rounded =
+      IconData(0xe676, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![drive_file_rename_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe676;%3C/text%3E%3C/svg%3E)  material symbols icon named "drive_file_rename_sharp" (sharp variation).
+  static const IconData drive_file_rename_sharp =
+      IconData(0xe676, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![drive_file_rename_outline](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe9a2;%3C/text%3E%3C/svg%3E)  material symbols icon named "drive_file_rename_outline" (outlined variation).
   static const IconData drive_file_rename_outline =
       IconData(0xe9a2, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -14684,6 +14892,18 @@ class Symbols {
   ///  ![dropdown_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe9a4;%3C/text%3E%3C/svg%3E)  material symbols icon named "dropdown_sharp" (sharp variation).
   static const IconData dropdown_sharp =
       IconData(0xe9a4, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![dropdown_menu](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffef0;%3C/text%3E%3C/svg%3E)  material symbols icon named "dropdown_menu" (outlined variation).
+  static const IconData dropdown_menu =
+      IconData(0xffef0, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![dropdown_menu_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffef0;%3C/text%3E%3C/svg%3E)  material symbols icon named "dropdown_menu_rounded" (rounded variation).
+  static const IconData dropdown_menu_rounded =
+      IconData(0xffef0, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![dropdown_menu_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffef0;%3C/text%3E%3C/svg%3E)  material symbols icon named "dropdown_menu_sharp" (sharp variation).
+  static const IconData dropdown_menu_sharp =
+      IconData(0xffef0, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![dropper_eye](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf351;%3C/text%3E%3C/svg%3E)  material symbols icon named "dropper_eye" (outlined variation).
   static const IconData dropper_eye =
@@ -15503,15 +15723,15 @@ class Symbols {
 
   ///  ![emoji_flags](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "emoji_flags" (outlined variation).
   static const IconData emoji_flags =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![emoji_flags_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "emoji_flags_rounded" (rounded variation).
   static const IconData emoji_flags_rounded =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![emoji_flags_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "emoji_flags_sharp" (sharp variation).
   static const IconData emoji_flags_sharp =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![emoji_food_beverage](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xea1b;%3C/text%3E%3C/svg%3E)  material symbols icon named "emoji_food_beverage" (outlined variation).
   static const IconData emoji_food_beverage =
@@ -16545,6 +16765,18 @@ class Symbols {
   static const IconData eyeglasses_2_sound_sharp =
       IconData(0xf265, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![eyeglasses_3](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffef1;%3C/text%3E%3C/svg%3E)  material symbols icon named "eyeglasses_3" (outlined variation).
+  static const IconData eyeglasses_3 =
+      IconData(0xffef1, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![eyeglasses_3_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffef1;%3C/text%3E%3C/svg%3E)  material symbols icon named "eyeglasses_3_rounded" (rounded variation).
+  static const IconData eyeglasses_3_rounded =
+      IconData(0xffef1, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![eyeglasses_3_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffef1;%3C/text%3E%3C/svg%3E)  material symbols icon named "eyeglasses_3_sharp" (sharp variation).
+  static const IconData eyeglasses_3_sharp =
+      IconData(0xffef1, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![face](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf008;%3C/text%3E%3C/svg%3E)  material symbols icon named "face" (outlined variation).
   static const IconData face =
       IconData(0xf008, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -17003,15 +17235,15 @@ class Symbols {
 
   ///  ![featured_video](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe06e;%3C/text%3E%3C/svg%3E)  material symbols icon named "featured_video" (outlined variation).
   static const IconData featured_video =
-      IconData(0xe06e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe06e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![featured_video_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe06e;%3C/text%3E%3C/svg%3E)  material symbols icon named "featured_video_rounded" (rounded variation).
   static const IconData featured_video_rounded =
-      IconData(0xe06e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe06e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![featured_video_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe06e;%3C/text%3E%3C/svg%3E)  material symbols icon named "featured_video_sharp" (sharp variation).
   static const IconData featured_video_sharp =
-      IconData(0xe06e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe06e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![feed](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf009;%3C/text%3E%3C/svg%3E)  material symbols icon named "feed" (outlined variation).
   static const IconData feed =
@@ -17901,18 +18133,6 @@ class Symbols {
   static const IconData fit_width_sharp =
       IconData(0xf779, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![fitbit_raquetball](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfffc5;%3C/text%3E%3C/svg%3E)  material symbols icon named "fitbit_raquetball" (outlined variation).
-  static const IconData fitbit_raquetball =
-      IconData(0xfffc5, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
-
-  ///  ![fitbit_raquetball_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfffc5;%3C/text%3E%3C/svg%3E)  material symbols icon named "fitbit_raquetball_rounded" (rounded variation).
-  static const IconData fitbit_raquetball_rounded =
-      IconData(0xfffc5, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
-
-  ///  ![fitbit_raquetball_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfffc5;%3C/text%3E%3C/svg%3E)  material symbols icon named "fitbit_raquetball_sharp" (sharp variation).
-  static const IconData fitbit_raquetball_sharp =
-      IconData(0xfffc5, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
-
   ///  ![fitness_center](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xeb43;%3C/text%3E%3C/svg%3E)  material symbols icon named "fitness_center" (outlined variation).
   static const IconData fitness_center =
       IconData(0xeb43, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -17951,15 +18171,15 @@ class Symbols {
 
   ///  ![flag](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "flag" (outlined variation).
   static const IconData flag =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![flag_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "flag_rounded" (rounded variation).
   static const IconData flag_rounded =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![flag_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "flag_sharp" (sharp variation).
   static const IconData flag_sharp =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![flag_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf40f;%3C/text%3E%3C/svg%3E)  material symbols icon named "flag_2" (outlined variation).
   static const IconData flag_2 =
@@ -17999,15 +18219,15 @@ class Symbols {
 
   ///  ![flag_filled](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "flag_filled" (outlined variation).
   static const IconData flag_filled =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![flag_filled_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "flag_filled_rounded" (rounded variation).
   static const IconData flag_filled_rounded =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![flag_filled_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "flag_filled_sharp" (sharp variation).
   static const IconData flag_filled_sharp =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![flaky](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef50;%3C/text%3E%3C/svg%3E)  material symbols icon named "flaky" (outlined variation).
   static const IconData flaky =
@@ -18275,27 +18495,27 @@ class Symbols {
 
   ///  ![float_landscape_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45c;%3C/text%3E%3C/svg%3E)  material symbols icon named "float_landscape_2" (outlined variation).
   static const IconData float_landscape_2 =
-      IconData(0xf45c, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45c, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![float_landscape_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45c;%3C/text%3E%3C/svg%3E)  material symbols icon named "float_landscape_2_rounded" (rounded variation).
   static const IconData float_landscape_2_rounded =
-      IconData(0xf45c, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45c, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![float_landscape_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45c;%3C/text%3E%3C/svg%3E)  material symbols icon named "float_landscape_2_sharp" (sharp variation).
   static const IconData float_landscape_2_sharp =
-      IconData(0xf45c, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45c, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![float_portrait_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45b;%3C/text%3E%3C/svg%3E)  material symbols icon named "float_portrait_2" (outlined variation).
   static const IconData float_portrait_2 =
-      IconData(0xf45b, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45b, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![float_portrait_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45b;%3C/text%3E%3C/svg%3E)  material symbols icon named "float_portrait_2_rounded" (rounded variation).
   static const IconData float_portrait_2_rounded =
-      IconData(0xf45b, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45b, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![float_portrait_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf45b;%3C/text%3E%3C/svg%3E)  material symbols icon named "float_portrait_2_sharp" (sharp variation).
   static const IconData float_portrait_2_sharp =
-      IconData(0xf45b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf45b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![flood](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xebe6;%3C/text%3E%3C/svg%3E)  material symbols icon named "flood" (outlined variation).
   static const IconData flood =
@@ -20325,6 +20545,18 @@ class Symbols {
   static const IconData garage_door_sharp =
       IconData(0xe714, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![garage_door_open](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff77;%3C/text%3E%3C/svg%3E)  material symbols icon named "garage_door_open" (outlined variation).
+  static const IconData garage_door_open =
+      IconData(0xfff77, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![garage_door_open_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff77;%3C/text%3E%3C/svg%3E)  material symbols icon named "garage_door_open_rounded" (rounded variation).
+  static const IconData garage_door_open_rounded =
+      IconData(0xfff77, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![garage_door_open_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff77;%3C/text%3E%3C/svg%3E)  material symbols icon named "garage_door_open_sharp" (sharp variation).
+  static const IconData garage_door_open_sharp =
+      IconData(0xfff77, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![garage_home](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe82d;%3C/text%3E%3C/svg%3E)  material symbols icon named "garage_home" (outlined variation).
   static const IconData garage_home =
       IconData(0xe82d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -20855,15 +21087,15 @@ class Symbols {
 
   ///  ![grading](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xea4f;%3C/text%3E%3C/svg%3E)  material symbols icon named "grading" (outlined variation).
   static const IconData grading =
-      IconData(0xea4f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xea4f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![grading_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xea4f;%3C/text%3E%3C/svg%3E)  material symbols icon named "grading_rounded" (rounded variation).
   static const IconData grading_rounded =
-      IconData(0xea4f, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xea4f, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![grading_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xea4f;%3C/text%3E%3C/svg%3E)  material symbols icon named "grading_sharp" (sharp variation).
   static const IconData grading_sharp =
-      IconData(0xea4f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xea4f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![grain](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3ea;%3C/text%3E%3C/svg%3E)  material symbols icon named "grain" (outlined variation).
   static const IconData grain =
@@ -22247,15 +22479,15 @@ class Symbols {
 
   ///  ![highlight_mouse_cursor](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf511;%3C/text%3E%3C/svg%3E)  material symbols icon named "highlight_mouse_cursor" (outlined variation).
   static const IconData highlight_mouse_cursor =
-      IconData(0xf511, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf511, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![highlight_mouse_cursor_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf511;%3C/text%3E%3C/svg%3E)  material symbols icon named "highlight_mouse_cursor_rounded" (rounded variation).
   static const IconData highlight_mouse_cursor_rounded =
-      IconData(0xf511, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf511, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![highlight_mouse_cursor_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf511;%3C/text%3E%3C/svg%3E)  material symbols icon named "highlight_mouse_cursor_sharp" (sharp variation).
   static const IconData highlight_mouse_cursor_sharp =
-      IconData(0xf511, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf511, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![highlight_off](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe888;%3C/text%3E%3C/svg%3E)  material symbols icon named "highlight_off" (outlined variation).
   static const IconData highlight_off =
@@ -22763,15 +22995,15 @@ class Symbols {
 
   ///  ![hotel_class](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe743;%3C/text%3E%3C/svg%3E)  material symbols icon named "hotel_class" (outlined variation).
   static const IconData hotel_class =
-      IconData(0xe743, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe743, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![hotel_class_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe743;%3C/text%3E%3C/svg%3E)  material symbols icon named "hotel_class_rounded" (rounded variation).
   static const IconData hotel_class_rounded =
-      IconData(0xe743, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe743, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![hotel_class_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe743;%3C/text%3E%3C/svg%3E)  material symbols icon named "hotel_class_sharp" (sharp variation).
   static const IconData hotel_class_sharp =
-      IconData(0xe743, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe743, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![hourglass](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xebff;%3C/text%3E%3C/svg%3E)  material symbols icon named "hourglass" (outlined variation).
   static const IconData hourglass =
@@ -23193,6 +23425,18 @@ class Symbols {
   static const IconData id_card_sharp =
       IconData(0xf4ca, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![id_card_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffeea;%3C/text%3E%3C/svg%3E)  material symbols icon named "id_card_2" (outlined variation).
+  static const IconData id_card_2 =
+      IconData(0xffeea, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![id_card_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffeea;%3C/text%3E%3C/svg%3E)  material symbols icon named "id_card_2_rounded" (rounded variation).
+  static const IconData id_card_2_rounded =
+      IconData(0xffeea, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![id_card_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffeea;%3C/text%3E%3C/svg%3E)  material symbols icon named "id_card_2_sharp" (sharp variation).
+  static const IconData id_card_2_sharp =
+      IconData(0xffeea, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![identity_aware_proxy](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe2dd;%3C/text%3E%3C/svg%3E)  material symbols icon named "identity_aware_proxy" (outlined variation).
   static const IconData identity_aware_proxy =
       IconData(0xe2dd, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -23277,17 +23521,17 @@ class Symbols {
   static const IconData image_arrow_up_sharp =
       IconData(0xf317, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![image_aspect_ratio](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3f5;%3C/text%3E%3C/svg%3E)  material symbols icon named "image_aspect_ratio" (outlined variation).
+  ///  ![image_aspect_ratio](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe6a6;%3C/text%3E%3C/svg%3E)  material symbols icon named "image_aspect_ratio" (outlined variation).
   static const IconData image_aspect_ratio =
-      IconData(0xe3f5, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe6a6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![image_aspect_ratio_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3f5;%3C/text%3E%3C/svg%3E)  material symbols icon named "image_aspect_ratio_rounded" (rounded variation).
+  ///  ![image_aspect_ratio_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe6a6;%3C/text%3E%3C/svg%3E)  material symbols icon named "image_aspect_ratio_rounded" (rounded variation).
   static const IconData image_aspect_ratio_rounded =
-      IconData(0xe3f5, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe6a6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![image_aspect_ratio_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe3f5;%3C/text%3E%3C/svg%3E)  material symbols icon named "image_aspect_ratio_sharp" (sharp variation).
+  ///  ![image_aspect_ratio_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe6a6;%3C/text%3E%3C/svg%3E)  material symbols icon named "image_aspect_ratio_sharp" (sharp variation).
   static const IconData image_aspect_ratio_sharp =
-      IconData(0xe3f5, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe6a6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![image_inset](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf247;%3C/text%3E%3C/svg%3E)  material symbols icon named "image_inset" (outlined variation).
   static const IconData image_inset =
@@ -23613,6 +23857,18 @@ class Symbols {
   static const IconData ink_highlighter_move_sharp =
       IconData(0xf524, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
+  ///  ![ink_highlighter_off](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff14;%3C/text%3E%3C/svg%3E)  material symbols icon named "ink_highlighter_off" (outlined variation).
+  static const IconData ink_highlighter_off =
+      IconData(0xfff14, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![ink_highlighter_off_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff14;%3C/text%3E%3C/svg%3E)  material symbols icon named "ink_highlighter_off_rounded" (rounded variation).
+  static const IconData ink_highlighter_off_rounded =
+      IconData(0xfff14, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![ink_highlighter_off_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff14;%3C/text%3E%3C/svg%3E)  material symbols icon named "ink_highlighter_off_sharp" (sharp variation).
+  static const IconData ink_highlighter_off_sharp =
+      IconData(0xfff14, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![ink_marker](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe6d2;%3C/text%3E%3C/svg%3E)  material symbols icon named "ink_marker" (outlined variation).
   static const IconData ink_marker =
       IconData(0xe6d2, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -23733,17 +23989,17 @@ class Symbols {
   static const IconData insert_comment_sharp =
       IconData(0xe24c, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![insert_drive_file](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe66d;%3C/text%3E%3C/svg%3E)  material symbols icon named "insert_drive_file" (outlined variation).
+  ///  ![insert_drive_file](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe674;%3C/text%3E%3C/svg%3E)  material symbols icon named "insert_drive_file" (outlined variation).
   static const IconData insert_drive_file =
-      IconData(0xe66d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe674, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![insert_drive_file_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe66d;%3C/text%3E%3C/svg%3E)  material symbols icon named "insert_drive_file_rounded" (rounded variation).
+  ///  ![insert_drive_file_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe674;%3C/text%3E%3C/svg%3E)  material symbols icon named "insert_drive_file_rounded" (rounded variation).
   static const IconData insert_drive_file_rounded =
-      IconData(0xe66d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe674, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![insert_drive_file_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe66d;%3C/text%3E%3C/svg%3E)  material symbols icon named "insert_drive_file_sharp" (sharp variation).
+  ///  ![insert_drive_file_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe674;%3C/text%3E%3C/svg%3E)  material symbols icon named "insert_drive_file_sharp" (sharp variation).
   static const IconData insert_drive_file_sharp =
-      IconData(0xe66d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe674, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![insert_emoticon](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xea22;%3C/text%3E%3C/svg%3E)  material symbols icon named "insert_emoticon" (outlined variation).
   static const IconData insert_emoticon =
@@ -24057,6 +24313,18 @@ class Symbols {
   static const IconData javascript_sharp =
       IconData(0xeb7c, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![jewelry](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffedb;%3C/text%3E%3C/svg%3E)  material symbols icon named "jewelry" (outlined variation).
+  static const IconData jewelry =
+      IconData(0xffedb, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![jewelry_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffedb;%3C/text%3E%3C/svg%3E)  material symbols icon named "jewelry_rounded" (rounded variation).
+  static const IconData jewelry_rounded =
+      IconData(0xffedb, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![jewelry_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffedb;%3C/text%3E%3C/svg%3E)  material symbols icon named "jewelry_sharp" (sharp variation).
+  static const IconData jewelry_sharp =
+      IconData(0xffedb, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![join](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf84f;%3C/text%3E%3C/svg%3E)  material symbols icon named "join" (outlined variation).
   static const IconData join =
       IconData(0xf84f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -24177,17 +24445,17 @@ class Symbols {
   static const IconData kebab_dining_sharp =
       IconData(0xe842, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![keep](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf026;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep" (outlined variation).
+  ///  ![keep](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf027;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep" (outlined variation).
   static const IconData keep =
-      IconData(0xf026, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf027, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![keep_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf026;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_rounded" (rounded variation).
+  ///  ![keep_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf027;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_rounded" (rounded variation).
   static const IconData keep_rounded =
-      IconData(0xf026, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf027, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![keep_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf026;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_sharp" (sharp variation).
+  ///  ![keep_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf027;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_sharp" (sharp variation).
   static const IconData keep_sharp =
-      IconData(0xf026, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf027, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![keep_off](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe6f9;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_off" (outlined variation).
   static const IconData keep_off =
@@ -24201,17 +24469,17 @@ class Symbols {
   static const IconData keep_off_sharp =
       IconData(0xe6f9, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![keep_pin](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf026;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_pin" (outlined variation).
+  ///  ![keep_pin](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf027;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_pin" (outlined variation).
   static const IconData keep_pin =
-      IconData(0xf026, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf027, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![keep_pin_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf026;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_pin_rounded" (rounded variation).
+  ///  ![keep_pin_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf027;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_pin_rounded" (rounded variation).
   static const IconData keep_pin_rounded =
-      IconData(0xf026, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf027, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![keep_pin_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf026;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_pin_sharp" (sharp variation).
+  ///  ![keep_pin_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf027;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_pin_sharp" (sharp variation).
   static const IconData keep_pin_sharp =
-      IconData(0xf026, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf027, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![keep_public](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf56f;%3C/text%3E%3C/svg%3E)  material symbols icon named "keep_public" (outlined variation).
   static const IconData keep_public =
@@ -24861,17 +25129,17 @@ class Symbols {
   static const IconData landslide_sharp =
       IconData(0xebd7, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![language](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe894;%3C/text%3E%3C/svg%3E)  material symbols icon named "language" (outlined variation).
+  ///  ![language](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xea07;%3C/text%3E%3C/svg%3E)  material symbols icon named "language" (outlined variation).
   static const IconData language =
-      IconData(0xe894, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xea07, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![language_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe894;%3C/text%3E%3C/svg%3E)  material symbols icon named "language_rounded" (rounded variation).
+  ///  ![language_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xea07;%3C/text%3E%3C/svg%3E)  material symbols icon named "language_rounded" (rounded variation).
   static const IconData language_rounded =
-      IconData(0xe894, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xea07, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![language_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe894;%3C/text%3E%3C/svg%3E)  material symbols icon named "language_sharp" (sharp variation).
+  ///  ![language_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xea07;%3C/text%3E%3C/svg%3E)  material symbols icon named "language_sharp" (sharp variation).
   static const IconData language_sharp =
-      IconData(0xe894, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xea07, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![language_chinese_array](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf766;%3C/text%3E%3C/svg%3E)  material symbols icon named "language_chinese_array" (outlined variation).
   static const IconData language_chinese_array =
@@ -25437,6 +25705,18 @@ class Symbols {
   static const IconData light_group_sharp =
       IconData(0xe28b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
+  ///  ![light_group_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff76;%3C/text%3E%3C/svg%3E)  material symbols icon named "light_group_2" (outlined variation).
+  static const IconData light_group_2 =
+      IconData(0xfff76, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![light_group_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff76;%3C/text%3E%3C/svg%3E)  material symbols icon named "light_group_2_rounded" (rounded variation).
+  static const IconData light_group_2_rounded =
+      IconData(0xfff76, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![light_group_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff76;%3C/text%3E%3C/svg%3E)  material symbols icon named "light_group_2_sharp" (sharp variation).
+  static const IconData light_group_2_sharp =
+      IconData(0xfff76, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![light_mode](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe518;%3C/text%3E%3C/svg%3E)  material symbols icon named "light_mode" (outlined variation).
   static const IconData light_mode =
       IconData(0xe518, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -25448,6 +25728,18 @@ class Symbols {
   ///  ![light_mode_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe518;%3C/text%3E%3C/svg%3E)  material symbols icon named "light_mode_sharp" (sharp variation).
   static const IconData light_mode_sharp =
       IconData(0xe518, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![light_mode_auto](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff00;%3C/text%3E%3C/svg%3E)  material symbols icon named "light_mode_auto" (outlined variation).
+  static const IconData light_mode_auto =
+      IconData(0xfff00, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![light_mode_auto_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff00;%3C/text%3E%3C/svg%3E)  material symbols icon named "light_mode_auto_rounded" (rounded variation).
+  static const IconData light_mode_auto_rounded =
+      IconData(0xfff00, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![light_mode_auto_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff00;%3C/text%3E%3C/svg%3E)  material symbols icon named "light_mode_auto_sharp" (sharp variation).
+  static const IconData light_mode_auto_sharp =
+      IconData(0xfff00, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![light_off](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe9b8;%3C/text%3E%3C/svg%3E)  material symbols icon named "light_off" (outlined variation).
   static const IconData light_off =
@@ -25521,6 +25813,18 @@ class Symbols {
   static const IconData lightning_stand_sharp =
       IconData(0xefa4, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![lightstrip](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff75;%3C/text%3E%3C/svg%3E)  material symbols icon named "lightstrip" (outlined variation).
+  static const IconData lightstrip =
+      IconData(0xfff75, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![lightstrip_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff75;%3C/text%3E%3C/svg%3E)  material symbols icon named "lightstrip_rounded" (rounded variation).
+  static const IconData lightstrip_rounded =
+      IconData(0xfff75, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![lightstrip_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff75;%3C/text%3E%3C/svg%3E)  material symbols icon named "lightstrip_sharp" (sharp variation).
+  static const IconData lightstrip_sharp =
+      IconData(0xfff75, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![line_axis](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xea9a;%3C/text%3E%3C/svg%3E)  material symbols icon named "line_axis" (outlined variation).
   static const IconData line_axis =
       IconData(0xea9a, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -25535,15 +25839,15 @@ class Symbols {
 
   ///  ![line_curve](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf757;%3C/text%3E%3C/svg%3E)  material symbols icon named "line_curve" (outlined variation).
   static const IconData line_curve =
-      IconData(0xf757, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf757, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![line_curve_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf757;%3C/text%3E%3C/svg%3E)  material symbols icon named "line_curve_rounded" (rounded variation).
   static const IconData line_curve_rounded =
-      IconData(0xf757, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf757, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![line_curve_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf757;%3C/text%3E%3C/svg%3E)  material symbols icon named "line_curve_sharp" (sharp variation).
   static const IconData line_curve_sharp =
-      IconData(0xf757, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf757, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![line_end](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf826;%3C/text%3E%3C/svg%3E)  material symbols icon named "line_end" (outlined variation).
   static const IconData line_end =
@@ -25821,17 +26125,17 @@ class Symbols {
   static const IconData list_sharp =
       IconData(0xe896, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![list_alt](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe0ee;%3C/text%3E%3C/svg%3E)  material symbols icon named "list_alt" (outlined variation).
+  ///  ![list_alt](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe677;%3C/text%3E%3C/svg%3E)  material symbols icon named "list_alt" (outlined variation).
   static const IconData list_alt =
-      IconData(0xe0ee, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe677, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![list_alt_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe0ee;%3C/text%3E%3C/svg%3E)  material symbols icon named "list_alt_rounded" (rounded variation).
+  ///  ![list_alt_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe677;%3C/text%3E%3C/svg%3E)  material symbols icon named "list_alt_rounded" (rounded variation).
   static const IconData list_alt_rounded =
-      IconData(0xe0ee, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe677, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![list_alt_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe0ee;%3C/text%3E%3C/svg%3E)  material symbols icon named "list_alt_sharp" (sharp variation).
+  ///  ![list_alt_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe677;%3C/text%3E%3C/svg%3E)  material symbols icon named "list_alt_sharp" (sharp variation).
   static const IconData list_alt_sharp =
-      IconData(0xe0ee, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe677, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![list_alt_add](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf756;%3C/text%3E%3C/svg%3E)  material symbols icon named "list_alt_add" (outlined variation).
   static const IconData list_alt_add =
@@ -25856,6 +26160,18 @@ class Symbols {
   ///  ![list_alt_check_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf3de;%3C/text%3E%3C/svg%3E)  material symbols icon named "list_alt_check_sharp" (sharp variation).
   static const IconData list_alt_check_sharp =
       IconData(0xf3de, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![list_arrow](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff33;%3C/text%3E%3C/svg%3E)  material symbols icon named "list_arrow" (outlined variation).
+  static const IconData list_arrow =
+      IconData(0xfff33, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![list_arrow_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff33;%3C/text%3E%3C/svg%3E)  material symbols icon named "list_arrow_rounded" (rounded variation).
+  static const IconData list_arrow_rounded =
+      IconData(0xfff33, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![list_arrow_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff33;%3C/text%3E%3C/svg%3E)  material symbols icon named "list_arrow_sharp" (sharp variation).
+  static const IconData list_arrow_sharp =
+      IconData(0xfff33, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![lists](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe9b9;%3C/text%3E%3C/svg%3E)  material symbols icon named "lists" (outlined variation).
   static const IconData lists =
@@ -28245,6 +28561,18 @@ class Symbols {
   static const IconData mobile_code_sharp =
       IconData(0xf2e2, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![mobile_dock](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf2e0;%3C/text%3E%3C/svg%3E)  material symbols icon named "mobile_dock" (outlined variation).
+  static const IconData mobile_dock =
+      IconData(0xf2e0, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![mobile_dock_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf2e0;%3C/text%3E%3C/svg%3E)  material symbols icon named "mobile_dock_rounded" (rounded variation).
+  static const IconData mobile_dock_rounded =
+      IconData(0xf2e0, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![mobile_dock_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf2e0;%3C/text%3E%3C/svg%3E)  material symbols icon named "mobile_dock_sharp" (sharp variation).
+  static const IconData mobile_dock_sharp =
+      IconData(0xf2e0, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![mobile_dots](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf2d0;%3C/text%3E%3C/svg%3E)  material symbols icon named "mobile_dots" (outlined variation).
   static const IconData mobile_dots =
       IconData(0xf2d0, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -28523,15 +28851,15 @@ class Symbols {
 
   ///  ![mobile_share_stack](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf2de;%3C/text%3E%3C/svg%3E)  material symbols icon named "mobile_share_stack" (outlined variation).
   static const IconData mobile_share_stack =
-      IconData(0xf2de, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf2de, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![mobile_share_stack_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf2de;%3C/text%3E%3C/svg%3E)  material symbols icon named "mobile_share_stack_rounded" (rounded variation).
   static const IconData mobile_share_stack_rounded =
-      IconData(0xf2de, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf2de, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![mobile_share_stack_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf2de;%3C/text%3E%3C/svg%3E)  material symbols icon named "mobile_share_stack_sharp" (sharp variation).
   static const IconData mobile_share_stack_sharp =
-      IconData(0xf2de, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf2de, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![mobile_sound](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf2e8;%3C/text%3E%3C/svg%3E)  material symbols icon named "mobile_sound" (outlined variation).
   static const IconData mobile_sound =
@@ -29613,29 +29941,29 @@ class Symbols {
   static const IconData moved_location_sharp =
       IconData(0xe594, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![movie](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe404;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie" (outlined variation).
+  ///  ![movie](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe684;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie" (outlined variation).
   static const IconData movie =
-      IconData(0xe404, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe684, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![movie_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe404;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie_rounded" (rounded variation).
+  ///  ![movie_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe684;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie_rounded" (rounded variation).
   static const IconData movie_rounded =
-      IconData(0xe404, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe684, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![movie_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe404;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie_sharp" (sharp variation).
+  ///  ![movie_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe684;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie_sharp" (sharp variation).
   static const IconData movie_sharp =
-      IconData(0xe404, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe684, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![movie_creation](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe404;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie_creation" (outlined variation).
+  ///  ![movie_creation](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe684;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie_creation" (outlined variation).
   static const IconData movie_creation =
-      IconData(0xe404, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe684, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![movie_creation_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe404;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie_creation_rounded" (rounded variation).
+  ///  ![movie_creation_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe684;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie_creation_rounded" (rounded variation).
   static const IconData movie_creation_rounded =
-      IconData(0xe404, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe684, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![movie_creation_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe404;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie_creation_sharp" (sharp variation).
+  ///  ![movie_creation_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe684;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie_creation_sharp" (sharp variation).
   static const IconData movie_creation_sharp =
-      IconData(0xe404, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe684, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![movie_edit](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf840;%3C/text%3E%3C/svg%3E)  material symbols icon named "movie_edit" (outlined variation).
   static const IconData movie_edit =
@@ -31533,17 +31861,17 @@ class Symbols {
   static const IconData not_started_sharp =
       IconData(0xf0d1, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![note](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe66d;%3C/text%3E%3C/svg%3E)  material symbols icon named "note" (outlined variation).
+  ///  ![note](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe674;%3C/text%3E%3C/svg%3E)  material symbols icon named "note" (outlined variation).
   static const IconData note =
-      IconData(0xe66d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe674, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![note_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe66d;%3C/text%3E%3C/svg%3E)  material symbols icon named "note_rounded" (rounded variation).
+  ///  ![note_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe674;%3C/text%3E%3C/svg%3E)  material symbols icon named "note_rounded" (rounded variation).
   static const IconData note_rounded =
-      IconData(0xe66d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe674, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
-  ///  ![note_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe66d;%3C/text%3E%3C/svg%3E)  material symbols icon named "note_sharp" (sharp variation).
+  ///  ![note_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe674;%3C/text%3E%3C/svg%3E)  material symbols icon named "note_sharp" (sharp variation).
   static const IconData note_sharp =
-      IconData(0xe66d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe674, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![note_add](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe89c;%3C/text%3E%3C/svg%3E)  material symbols icon named "note_add" (outlined variation).
   static const IconData note_add =
@@ -32267,15 +32595,15 @@ class Symbols {
 
   ///  ![outlined_flag](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "outlined_flag" (outlined variation).
   static const IconData outlined_flag =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![outlined_flag_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "outlined_flag_rounded" (rounded variation).
   static const IconData outlined_flag_rounded =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![outlined_flag_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0c6;%3C/text%3E%3C/svg%3E)  material symbols icon named "outlined_flag_sharp" (sharp variation).
   static const IconData outlined_flag_sharp =
-      IconData(0xf0c6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf0c6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![outpatient](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe118;%3C/text%3E%3C/svg%3E)  material symbols icon named "outpatient" (outlined variation).
   static const IconData outpatient =
@@ -32649,17 +32977,17 @@ class Symbols {
   static const IconData pan_zoom_sharp =
       IconData(0xf655, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![panorama](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe40b;%3C/text%3E%3C/svg%3E)  material symbols icon named "panorama" (outlined variation).
+  ///  ![panorama](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe691;%3C/text%3E%3C/svg%3E)  material symbols icon named "panorama" (outlined variation).
   static const IconData panorama =
-      IconData(0xe40b, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe691, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![panorama_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe40b;%3C/text%3E%3C/svg%3E)  material symbols icon named "panorama_rounded" (rounded variation).
+  ///  ![panorama_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe691;%3C/text%3E%3C/svg%3E)  material symbols icon named "panorama_rounded" (rounded variation).
   static const IconData panorama_rounded =
-      IconData(0xe40b, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe691, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![panorama_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe40b;%3C/text%3E%3C/svg%3E)  material symbols icon named "panorama_sharp" (sharp variation).
+  ///  ![panorama_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe691;%3C/text%3E%3C/svg%3E)  material symbols icon named "panorama_sharp" (sharp variation).
   static const IconData panorama_sharp =
-      IconData(0xe40b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe691, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![panorama_fish_eye](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe40c;%3C/text%3E%3C/svg%3E)  material symbols icon named "panorama_fish_eye" (outlined variation).
   static const IconData panorama_fish_eye =
@@ -34053,17 +34381,17 @@ class Symbols {
   static const IconData phonelink_setup_sharp =
       IconData(0xf2d9, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![photo](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe432;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo" (outlined variation).
+  ///  ![photo](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe693;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo" (outlined variation).
   static const IconData photo =
-      IconData(0xe432, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe693, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![photo_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe432;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_rounded" (rounded variation).
+  ///  ![photo_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe693;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_rounded" (rounded variation).
   static const IconData photo_rounded =
-      IconData(0xe432, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe693, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![photo_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe432;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_sharp" (sharp variation).
+  ///  ![photo_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe693;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_sharp" (sharp variation).
   static const IconData photo_sharp =
-      IconData(0xe432, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe693, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![photo_album](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe411;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_album" (outlined variation).
   static const IconData photo_album =
@@ -34173,17 +34501,17 @@ class Symbols {
   static const IconData photo_prints_sharp =
       IconData(0xefb2, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![photo_size_select_actual](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe432;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_size_select_actual" (outlined variation).
+  ///  ![photo_size_select_actual](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe693;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_size_select_actual" (outlined variation).
   static const IconData photo_size_select_actual =
-      IconData(0xe432, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe693, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![photo_size_select_actual_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe432;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_size_select_actual_rounded" (rounded variation).
+  ///  ![photo_size_select_actual_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe693;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_size_select_actual_rounded" (rounded variation).
   static const IconData photo_size_select_actual_rounded =
-      IconData(0xe432, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe693, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![photo_size_select_actual_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe432;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_size_select_actual_sharp" (sharp variation).
+  ///  ![photo_size_select_actual_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe693;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_size_select_actual_sharp" (sharp variation).
   static const IconData photo_size_select_actual_sharp =
-      IconData(0xe432, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe693, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![photo_size_select_large](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe433;%3C/text%3E%3C/svg%3E)  material symbols icon named "photo_size_select_large" (outlined variation).
   static const IconData photo_size_select_large =
@@ -34283,27 +34611,27 @@ class Symbols {
 
   ///  ![picture_in_picture](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe8aa;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture" (outlined variation).
   static const IconData picture_in_picture =
-      IconData(0xe8aa, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe8aa, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe8aa;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_rounded" (rounded variation).
   static const IconData picture_in_picture_rounded =
-      IconData(0xe8aa, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe8aa, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe8aa;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_sharp" (sharp variation).
   static const IconData picture_in_picture_sharp =
-      IconData(0xe8aa, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe8aa, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_alt](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe911;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_alt" (outlined variation).
   static const IconData picture_in_picture_alt =
-      IconData(0xe911, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe911, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_alt_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe911;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_alt_rounded" (rounded variation).
   static const IconData picture_in_picture_alt_rounded =
-      IconData(0xe911, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe911, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_alt_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe911;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_alt_sharp" (sharp variation).
   static const IconData picture_in_picture_alt_sharp =
-      IconData(0xe911, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe911, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_center](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf550;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_center" (outlined variation).
   static const IconData picture_in_picture_center =
@@ -34319,39 +34647,39 @@ class Symbols {
 
   ///  ![picture_in_picture_large](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf54f;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_large" (outlined variation).
   static const IconData picture_in_picture_large =
-      IconData(0xf54f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf54f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_large_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf54f;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_large_rounded" (rounded variation).
   static const IconData picture_in_picture_large_rounded =
-      IconData(0xf54f, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf54f, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_large_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf54f;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_large_sharp" (sharp variation).
   static const IconData picture_in_picture_large_sharp =
-      IconData(0xf54f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf54f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_medium](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf54e;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_medium" (outlined variation).
   static const IconData picture_in_picture_medium =
-      IconData(0xf54e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf54e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_medium_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf54e;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_medium_rounded" (rounded variation).
   static const IconData picture_in_picture_medium_rounded =
-      IconData(0xf54e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf54e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_medium_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf54e;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_medium_sharp" (sharp variation).
   static const IconData picture_in_picture_medium_sharp =
-      IconData(0xf54e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf54e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_mobile](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf517;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_mobile" (outlined variation).
   static const IconData picture_in_picture_mobile =
-      IconData(0xf517, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf517, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_mobile_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf517;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_mobile_rounded" (rounded variation).
   static const IconData picture_in_picture_mobile_rounded =
-      IconData(0xf517, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf517, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_mobile_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf517;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_mobile_sharp" (sharp variation).
   static const IconData picture_in_picture_mobile_sharp =
-      IconData(0xf517, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf517, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_off](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf52f;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_off" (outlined variation).
   static const IconData picture_in_picture_off =
@@ -34367,15 +34695,15 @@ class Symbols {
 
   ///  ![picture_in_picture_small](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf54d;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_small" (outlined variation).
   static const IconData picture_in_picture_small =
-      IconData(0xf54d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf54d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_small_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf54d;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_small_rounded" (rounded variation).
   static const IconData picture_in_picture_small_rounded =
-      IconData(0xf54d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf54d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![picture_in_picture_small_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf54d;%3C/text%3E%3C/svg%3E)  material symbols icon named "picture_in_picture_small_sharp" (sharp variation).
   static const IconData picture_in_picture_small_sharp =
-      IconData(0xf54d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf54d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![pie_chart](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0da;%3C/text%3E%3C/svg%3E)  material symbols icon named "pie_chart" (outlined variation).
   static const IconData pie_chart =
@@ -34485,6 +34813,18 @@ class Symbols {
   static const IconData pin_end_sharp =
       IconData(0xe767, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![pin_history](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff2e;%3C/text%3E%3C/svg%3E)  material symbols icon named "pin_history" (outlined variation).
+  static const IconData pin_history =
+      IconData(0xfff2e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![pin_history_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff2e;%3C/text%3E%3C/svg%3E)  material symbols icon named "pin_history_rounded" (rounded variation).
+  static const IconData pin_history_rounded =
+      IconData(0xfff2e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![pin_history_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff2e;%3C/text%3E%3C/svg%3E)  material symbols icon named "pin_history_sharp" (sharp variation).
+  static const IconData pin_history_sharp =
+      IconData(0xfff2e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![pin_invoke](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe763;%3C/text%3E%3C/svg%3E)  material symbols icon named "pin_invoke" (outlined variation).
   static const IconData pin_invoke =
       IconData(0xe763, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -34496,6 +34836,30 @@ class Symbols {
   ///  ![pin_invoke_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe763;%3C/text%3E%3C/svg%3E)  material symbols icon named "pin_invoke_sharp" (sharp variation).
   static const IconData pin_invoke_sharp =
       IconData(0xe763, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![pin_road](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff2d;%3C/text%3E%3C/svg%3E)  material symbols icon named "pin_road" (outlined variation).
+  static const IconData pin_road =
+      IconData(0xfff2d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![pin_road_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff2d;%3C/text%3E%3C/svg%3E)  material symbols icon named "pin_road_rounded" (rounded variation).
+  static const IconData pin_road_rounded =
+      IconData(0xfff2d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![pin_road_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff2d;%3C/text%3E%3C/svg%3E)  material symbols icon named "pin_road_sharp" (sharp variation).
+  static const IconData pin_road_sharp =
+      IconData(0xfff2d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![pin_road_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffeeb;%3C/text%3E%3C/svg%3E)  material symbols icon named "pin_road_2" (outlined variation).
+  static const IconData pin_road_2 =
+      IconData(0xffeeb, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![pin_road_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffeeb;%3C/text%3E%3C/svg%3E)  material symbols icon named "pin_road_2_rounded" (rounded variation).
+  static const IconData pin_road_2_rounded =
+      IconData(0xffeeb, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![pin_road_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffeeb;%3C/text%3E%3C/svg%3E)  material symbols icon named "pin_road_2_sharp" (sharp variation).
+  static const IconData pin_road_2_sharp =
+      IconData(0xffeeb, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![pinboard](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf3ab;%3C/text%3E%3C/svg%3E)  material symbols icon named "pinboard" (outlined variation).
   static const IconData pinboard =
@@ -35111,15 +35475,15 @@ class Symbols {
 
   ///  ![position_top_right](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf709;%3C/text%3E%3C/svg%3E)  material symbols icon named "position_top_right" (outlined variation).
   static const IconData position_top_right =
-      IconData(0xf709, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf709, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![position_top_right_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf709;%3C/text%3E%3C/svg%3E)  material symbols icon named "position_top_right_rounded" (rounded variation).
   static const IconData position_top_right_rounded =
-      IconData(0xf709, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf709, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![position_top_right_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf709;%3C/text%3E%3C/svg%3E)  material symbols icon named "position_top_right_sharp" (sharp variation).
   static const IconData position_top_right_sharp =
-      IconData(0xf709, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf709, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![post](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe705;%3C/text%3E%3C/svg%3E)  material symbols icon named "post" (outlined variation).
   static const IconData post =
@@ -35421,17 +35785,17 @@ class Symbols {
   static const IconData print_lock_sharp =
       IconData(0xf651, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![priority](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe19f;%3C/text%3E%3C/svg%3E)  material symbols icon named "priority" (outlined variation).
+  ///  ![priority](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xefb4;%3C/text%3E%3C/svg%3E)  material symbols icon named "priority" (outlined variation).
   static const IconData priority =
-      IconData(0xe19f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xefb4, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![priority_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe19f;%3C/text%3E%3C/svg%3E)  material symbols icon named "priority_rounded" (rounded variation).
+  ///  ![priority_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xefb4;%3C/text%3E%3C/svg%3E)  material symbols icon named "priority_rounded" (rounded variation).
   static const IconData priority_rounded =
-      IconData(0xe19f, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xefb4, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![priority_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe19f;%3C/text%3E%3C/svg%3E)  material symbols icon named "priority_sharp" (sharp variation).
+  ///  ![priority_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xefb4;%3C/text%3E%3C/svg%3E)  material symbols icon named "priority_sharp" (sharp variation).
   static const IconData priority_sharp =
-      IconData(0xe19f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xefb4, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![priority_high](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe645;%3C/text%3E%3C/svg%3E)  material symbols icon named "priority_high" (outlined variation).
   static const IconData priority_high =
@@ -36969,6 +37333,18 @@ class Symbols {
   static const IconData reset_brightness_sharp =
       IconData(0xf482, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![reset_colors](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee2;%3C/text%3E%3C/svg%3E)  material symbols icon named "reset_colors" (outlined variation).
+  static const IconData reset_colors =
+      IconData(0xffee2, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![reset_colors_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee2;%3C/text%3E%3C/svg%3E)  material symbols icon named "reset_colors_rounded" (rounded variation).
+  static const IconData reset_colors_rounded =
+      IconData(0xffee2, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![reset_colors_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee2;%3C/text%3E%3C/svg%3E)  material symbols icon named "reset_colors_sharp" (sharp variation).
+  static const IconData reset_colors_sharp =
+      IconData(0xffee2, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![reset_exposure](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf266;%3C/text%3E%3C/svg%3E)  material symbols icon named "reset_exposure" (outlined variation).
   static const IconData reset_exposure =
       IconData(0xf266, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -38433,17 +38809,17 @@ class Symbols {
   static const IconData sdk_sharp =
       IconData(0xe720, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![search](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe8b6;%3C/text%3E%3C/svg%3E)  material symbols icon named "search" (outlined variation).
+  ///  ![search](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef7a;%3C/text%3E%3C/svg%3E)  material symbols icon named "search" (outlined variation).
   static const IconData search =
-      IconData(0xe8b6, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xef7a, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![search_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe8b6;%3C/text%3E%3C/svg%3E)  material symbols icon named "search_rounded" (rounded variation).
+  ///  ![search_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef7a;%3C/text%3E%3C/svg%3E)  material symbols icon named "search_rounded" (rounded variation).
   static const IconData search_rounded =
-      IconData(0xe8b6, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xef7a, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![search_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe8b6;%3C/text%3E%3C/svg%3E)  material symbols icon named "search_sharp" (sharp variation).
+  ///  ![search_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef7a;%3C/text%3E%3C/svg%3E)  material symbols icon named "search_sharp" (sharp variation).
   static const IconData search_sharp =
-      IconData(0xe8b6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xef7a, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![search_activity](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf3e5;%3C/text%3E%3C/svg%3E)  material symbols icon named "search_activity" (outlined variation).
   static const IconData search_activity =
@@ -38577,6 +38953,18 @@ class Symbols {
   static const IconData seat_heat_right_sharp =
       IconData(0xf32e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![seat_read](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffeda;%3C/text%3E%3C/svg%3E)  material symbols icon named "seat_read" (outlined variation).
+  static const IconData seat_read =
+      IconData(0xffeda, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![seat_read_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffeda;%3C/text%3E%3C/svg%3E)  material symbols icon named "seat_read_rounded" (rounded variation).
+  static const IconData seat_read_rounded =
+      IconData(0xffeda, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![seat_read_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffeda;%3C/text%3E%3C/svg%3E)  material symbols icon named "seat_read_sharp" (sharp variation).
+  static const IconData seat_read_sharp =
+      IconData(0xffeda, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![seat_vent_left](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf32d;%3C/text%3E%3C/svg%3E)  material symbols icon named "seat_vent_left" (outlined variation).
   static const IconData seat_vent_left =
       IconData(0xf32d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -38600,6 +38988,18 @@ class Symbols {
   ///  ![seat_vent_right_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf32c;%3C/text%3E%3C/svg%3E)  material symbols icon named "seat_vent_right_sharp" (sharp variation).
   static const IconData seat_vent_right_sharp =
       IconData(0xf32c, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![seat_window](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee1;%3C/text%3E%3C/svg%3E)  material symbols icon named "seat_window" (outlined variation).
+  static const IconData seat_window =
+      IconData(0xffee1, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![seat_window_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee1;%3C/text%3E%3C/svg%3E)  material symbols icon named "seat_window_rounded" (rounded variation).
+  static const IconData seat_window_rounded =
+      IconData(0xffee1, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![seat_window_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee1;%3C/text%3E%3C/svg%3E)  material symbols icon named "seat_window_sharp" (sharp variation).
+  static const IconData seat_window_sharp =
+      IconData(0xffee1, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![security](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe32a;%3C/text%3E%3C/svg%3E)  material symbols icon named "security" (outlined variation).
   static const IconData security =
@@ -39477,6 +39877,18 @@ class Symbols {
   static const IconData settings_remote_sharp =
       IconData(0xe8c7, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![settings_screen](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffedf;%3C/text%3E%3C/svg%3E)  material symbols icon named "settings_screen" (outlined variation).
+  static const IconData settings_screen =
+      IconData(0xffedf, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![settings_screen_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffedf;%3C/text%3E%3C/svg%3E)  material symbols icon named "settings_screen_rounded" (rounded variation).
+  static const IconData settings_screen_rounded =
+      IconData(0xffedf, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![settings_screen_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffedf;%3C/text%3E%3C/svg%3E)  material symbols icon named "settings_screen_sharp" (sharp variation).
+  static const IconData settings_screen_sharp =
+      IconData(0xffedf, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![settings_seating](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xef2d;%3C/text%3E%3C/svg%3E)  material symbols icon named "settings_seating" (outlined variation).
   static const IconData settings_seating =
       IconData(0xef2d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -39584,6 +39996,30 @@ class Symbols {
   ///  ![severe_cold_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xebd3;%3C/text%3E%3C/svg%3E)  material symbols icon named "severe_cold_sharp" (sharp variation).
   static const IconData severe_cold_sharp =
       IconData(0xebd3, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![shades](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff73;%3C/text%3E%3C/svg%3E)  material symbols icon named "shades" (outlined variation).
+  static const IconData shades =
+      IconData(0xfff73, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![shades_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff73;%3C/text%3E%3C/svg%3E)  material symbols icon named "shades_rounded" (rounded variation).
+  static const IconData shades_rounded =
+      IconData(0xfff73, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![shades_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff73;%3C/text%3E%3C/svg%3E)  material symbols icon named "shades_sharp" (sharp variation).
+  static const IconData shades_sharp =
+      IconData(0xfff73, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![shades_closed](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff74;%3C/text%3E%3C/svg%3E)  material symbols icon named "shades_closed" (outlined variation).
+  static const IconData shades_closed =
+      IconData(0xfff74, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![shades_closed_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff74;%3C/text%3E%3C/svg%3E)  material symbols icon named "shades_closed_rounded" (rounded variation).
+  static const IconData shades_closed_rounded =
+      IconData(0xfff74, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![shades_closed_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff74;%3C/text%3E%3C/svg%3E)  material symbols icon named "shades_closed_sharp" (sharp variation).
+  static const IconData shades_closed_sharp =
+      IconData(0xfff74, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![shadow](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe9df;%3C/text%3E%3C/svg%3E)  material symbols icon named "shadow" (outlined variation).
   static const IconData shadow =
@@ -39801,6 +40237,18 @@ class Symbols {
   static const IconData shield_sharp =
       IconData(0xe9e0, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![shield_card](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff30;%3C/text%3E%3C/svg%3E)  material symbols icon named "shield_card" (outlined variation).
+  static const IconData shield_card =
+      IconData(0xfff30, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![shield_card_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff30;%3C/text%3E%3C/svg%3E)  material symbols icon named "shield_card_rounded" (rounded variation).
+  static const IconData shield_card_rounded =
+      IconData(0xfff30, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![shield_card_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff30;%3C/text%3E%3C/svg%3E)  material symbols icon named "shield_card_sharp" (sharp variation).
+  static const IconData shield_card_sharp =
+      IconData(0xfff30, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![shield_lock](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf686;%3C/text%3E%3C/svg%3E)  material symbols icon named "shield_lock" (outlined variation).
   static const IconData shield_lock =
       IconData(0xf686, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -39860,6 +40308,18 @@ class Symbols {
   ///  ![shield_question_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf529;%3C/text%3E%3C/svg%3E)  material symbols icon named "shield_question_sharp" (sharp variation).
   static const IconData shield_question_sharp =
       IconData(0xf529, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+
+  ///  ![shield_radar](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff2f;%3C/text%3E%3C/svg%3E)  material symbols icon named "shield_radar" (outlined variation).
+  static const IconData shield_radar =
+      IconData(0xfff2f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![shield_radar_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff2f;%3C/text%3E%3C/svg%3E)  material symbols icon named "shield_radar_rounded" (rounded variation).
+  static const IconData shield_radar_rounded =
+      IconData(0xfff2f, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![shield_radar_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff2f;%3C/text%3E%3C/svg%3E)  material symbols icon named "shield_radar_sharp" (sharp variation).
+  static const IconData shield_radar_sharp =
+      IconData(0xfff2f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![shield_toggle](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf2ad;%3C/text%3E%3C/svg%3E)  material symbols icon named "shield_toggle" (outlined variation).
   static const IconData shield_toggle =
@@ -40244,6 +40704,18 @@ class Symbols {
   ///  ![sign_language_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf258;%3C/text%3E%3C/svg%3E)  material symbols icon named "sign_language_2_sharp" (sharp variation).
   static const IconData sign_language_2_sharp =
       IconData(0xf258, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![sign_language_off](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee4;%3C/text%3E%3C/svg%3E)  material symbols icon named "sign_language_off" (outlined variation).
+  static const IconData sign_language_off =
+      IconData(0xffee4, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![sign_language_off_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee4;%3C/text%3E%3C/svg%3E)  material symbols icon named "sign_language_off_rounded" (rounded variation).
+  static const IconData sign_language_off_rounded =
+      IconData(0xffee4, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![sign_language_off_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffee4;%3C/text%3E%3C/svg%3E)  material symbols icon named "sign_language_off_sharp" (sharp variation).
+  static const IconData sign_language_off_sharp =
+      IconData(0xffee4, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![signal_cellular_0_bar](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0a8;%3C/text%3E%3C/svg%3E)  material symbols icon named "signal_cellular_0_bar" (outlined variation).
   static const IconData signal_cellular_0_bar =
@@ -41073,6 +41545,18 @@ class Symbols {
   static const IconData sms_failed_sharp =
       IconData(0xe87f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![snail](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffede;%3C/text%3E%3C/svg%3E)  material symbols icon named "snail" (outlined variation).
+  static const IconData snail =
+      IconData(0xffede, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![snail_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffede;%3C/text%3E%3C/svg%3E)  material symbols icon named "snail_rounded" (rounded variation).
+  static const IconData snail_rounded =
+      IconData(0xffede, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![snail_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffede;%3C/text%3E%3C/svg%3E)  material symbols icon named "snail_sharp" (sharp variation).
+  static const IconData snail_sharp =
+      IconData(0xffede, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![snippet_folder](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf1c7;%3C/text%3E%3C/svg%3E)  material symbols icon named "snippet_folder" (outlined variation).
   static const IconData snippet_folder =
       IconData(0xf1c7, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -41325,6 +41809,18 @@ class Symbols {
   static const IconData sound_sampler_sharp =
       IconData(0xf6b4, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![soundbar](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff72;%3C/text%3E%3C/svg%3E)  material symbols icon named "soundbar" (outlined variation).
+  static const IconData soundbar =
+      IconData(0xfff72, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![soundbar_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff72;%3C/text%3E%3C/svg%3E)  material symbols icon named "soundbar_rounded" (rounded variation).
+  static const IconData soundbar_rounded =
+      IconData(0xfff72, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![soundbar_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff72;%3C/text%3E%3C/svg%3E)  material symbols icon named "soundbar_sharp" (sharp variation).
+  static const IconData soundbar_sharp =
+      IconData(0xfff72, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![soup_kitchen](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe7d3;%3C/text%3E%3C/svg%3E)  material symbols icon named "soup_kitchen" (outlined variation).
   static const IconData soup_kitchen =
       IconData(0xe7d3, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -41528,6 +42024,18 @@ class Symbols {
   ///  ![speaker_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe32d;%3C/text%3E%3C/svg%3E)  material symbols icon named "speaker_sharp" (sharp variation).
   static const IconData speaker_sharp =
       IconData(0xe32d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![speaker_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff71;%3C/text%3E%3C/svg%3E)  material symbols icon named "speaker_2" (outlined variation).
+  static const IconData speaker_2 =
+      IconData(0xfff71, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![speaker_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff71;%3C/text%3E%3C/svg%3E)  material symbols icon named "speaker_2_rounded" (rounded variation).
+  static const IconData speaker_2_rounded =
+      IconData(0xfff71, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![speaker_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff71;%3C/text%3E%3C/svg%3E)  material symbols icon named "speaker_2_sharp" (sharp variation).
+  static const IconData speaker_2_sharp =
+      IconData(0xfff71, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![speaker_group](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe32e;%3C/text%3E%3C/svg%3E)  material symbols icon named "speaker_group" (outlined variation).
   static const IconData speaker_group =
@@ -41781,6 +42289,18 @@ class Symbols {
   static const IconData speed_1_7x_sharp =
       IconData(0xf493, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![speed_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff38;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_2" (outlined variation).
+  static const IconData speed_2 =
+      IconData(0xfff38, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![speed_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff38;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_2_rounded" (rounded variation).
+  static const IconData speed_2_rounded =
+      IconData(0xfff38, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![speed_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff38;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_2_sharp" (sharp variation).
+  static const IconData speed_2_sharp =
+      IconData(0xfff38, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![speed_2x](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf4eb;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_2x" (outlined variation).
   static const IconData speed_2x =
       IconData(0xf4eb, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -41792,6 +42312,30 @@ class Symbols {
   ///  ![speed_2x_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf4eb;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_2x_sharp" (sharp variation).
   static const IconData speed_2x_sharp =
       IconData(0xf4eb, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![speed_3](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff37;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_3" (outlined variation).
+  static const IconData speed_3 =
+      IconData(0xfff37, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![speed_3_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff37;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_3_rounded" (rounded variation).
+  static const IconData speed_3_rounded =
+      IconData(0xfff37, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![speed_3_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff37;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_3_sharp" (sharp variation).
+  static const IconData speed_3_sharp =
+      IconData(0xfff37, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![speed_4](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff36;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_4" (outlined variation).
+  static const IconData speed_4 =
+      IconData(0xfff36, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![speed_4_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff36;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_4_rounded" (rounded variation).
+  static const IconData speed_4_rounded =
+      IconData(0xfff36, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![speed_4_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff36;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_4_sharp" (sharp variation).
+  static const IconData speed_4_sharp =
+      IconData(0xfff36, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![speed_camera](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf470;%3C/text%3E%3C/svg%3E)  material symbols icon named "speed_camera" (outlined variation).
   static const IconData speed_camera =
@@ -41828,6 +42372,18 @@ class Symbols {
   ///  ![split_scene_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf3bf;%3C/text%3E%3C/svg%3E)  material symbols icon named "split_scene_sharp" (sharp variation).
   static const IconData split_scene_sharp =
       IconData(0xf3bf, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![split_scene_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffef7;%3C/text%3E%3C/svg%3E)  material symbols icon named "split_scene_2" (outlined variation).
+  static const IconData split_scene_2 =
+      IconData(0xffef7, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![split_scene_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffef7;%3C/text%3E%3C/svg%3E)  material symbols icon named "split_scene_2_rounded" (rounded variation).
+  static const IconData split_scene_2_rounded =
+      IconData(0xffef7, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![split_scene_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xffef7;%3C/text%3E%3C/svg%3E)  material symbols icon named "split_scene_2_sharp" (sharp variation).
+  static const IconData split_scene_2_sharp =
+      IconData(0xffef7, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![split_scene_down](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf2ff;%3C/text%3E%3C/svg%3E)  material symbols icon named "split_scene_down" (outlined variation).
   static const IconData split_scene_down =
@@ -42575,15 +43131,15 @@ class Symbols {
 
   ///  ![star_half](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe839;%3C/text%3E%3C/svg%3E)  material symbols icon named "star_half" (outlined variation).
   static const IconData star_half =
-      IconData(0xe839, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe839, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![star_half_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe839;%3C/text%3E%3C/svg%3E)  material symbols icon named "star_half_rounded" (rounded variation).
   static const IconData star_half_rounded =
-      IconData(0xe839, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe839, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![star_half_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe839;%3C/text%3E%3C/svg%3E)  material symbols icon named "star_half_sharp" (sharp variation).
   static const IconData star_half_sharp =
-      IconData(0xe839, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe839, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![star_outline](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf09a;%3C/text%3E%3C/svg%3E)  material symbols icon named "star_outline" (outlined variation).
   static const IconData star_outline =
@@ -43485,6 +44041,18 @@ class Symbols {
   static const IconData subway_walk_sharp =
       IconData(0xf287, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
+  ///  ![subwoofer](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff70;%3C/text%3E%3C/svg%3E)  material symbols icon named "subwoofer" (outlined variation).
+  static const IconData subwoofer =
+      IconData(0xfff70, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![subwoofer_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff70;%3C/text%3E%3C/svg%3E)  material symbols icon named "subwoofer_rounded" (rounded variation).
+  static const IconData subwoofer_rounded =
+      IconData(0xfff70, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![subwoofer_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff70;%3C/text%3E%3C/svg%3E)  material symbols icon named "subwoofer_sharp" (sharp variation).
+  static const IconData subwoofer_sharp =
+      IconData(0xfff70, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![summarize](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf071;%3C/text%3E%3C/svg%3E)  material symbols icon named "summarize" (outlined variation).
   static const IconData summarize =
       IconData(0xf071, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -43977,6 +44545,18 @@ class Symbols {
   static const IconData switch_left_sharp =
       IconData(0xf1d1, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![switch_off](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6f;%3C/text%3E%3C/svg%3E)  material symbols icon named "switch_off" (outlined variation).
+  static const IconData switch_off =
+      IconData(0xfff6f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![switch_off_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6f;%3C/text%3E%3C/svg%3E)  material symbols icon named "switch_off_rounded" (rounded variation).
+  static const IconData switch_off_rounded =
+      IconData(0xfff6f, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![switch_off_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6f;%3C/text%3E%3C/svg%3E)  material symbols icon named "switch_off_sharp" (sharp variation).
+  static const IconData switch_off_sharp =
+      IconData(0xfff6f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![switch_right](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf1d2;%3C/text%3E%3C/svg%3E)  material symbols icon named "switch_right" (outlined variation).
   static const IconData switch_right =
       IconData(0xf1d2, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -44291,15 +44871,15 @@ class Symbols {
 
   ///  ![tab_close_right](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf746;%3C/text%3E%3C/svg%3E)  material symbols icon named "tab_close_right" (outlined variation).
   static const IconData tab_close_right =
-      IconData(0xf746, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf746, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![tab_close_right_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf746;%3C/text%3E%3C/svg%3E)  material symbols icon named "tab_close_right_rounded" (rounded variation).
   static const IconData tab_close_right_rounded =
-      IconData(0xf746, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf746, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![tab_close_right_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf746;%3C/text%3E%3C/svg%3E)  material symbols icon named "tab_close_right_sharp" (sharp variation).
   static const IconData tab_close_right_sharp =
-      IconData(0xf746, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf746, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![tab_duplicate](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf744;%3C/text%3E%3C/svg%3E)  material symbols icon named "tab_duplicate" (outlined variation).
   static const IconData tab_duplicate =
@@ -44351,15 +44931,15 @@ class Symbols {
 
   ///  ![tab_new_right](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf741;%3C/text%3E%3C/svg%3E)  material symbols icon named "tab_new_right" (outlined variation).
   static const IconData tab_new_right =
-      IconData(0xf741, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf741, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![tab_new_right_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf741;%3C/text%3E%3C/svg%3E)  material symbols icon named "tab_new_right_rounded" (rounded variation).
   static const IconData tab_new_right_rounded =
-      IconData(0xf741, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf741, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![tab_new_right_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf741;%3C/text%3E%3C/svg%3E)  material symbols icon named "tab_new_right_sharp" (sharp variation).
   static const IconData tab_new_right_sharp =
-      IconData(0xf741, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xf741, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![tab_recent](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf740;%3C/text%3E%3C/svg%3E)  material symbols icon named "tab_recent" (outlined variation).
   static const IconData tab_recent =
@@ -45705,6 +46285,30 @@ class Symbols {
   static const IconData tile_small_sharp =
       IconData(0xf3c1, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![tilt_arrow_down](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff26;%3C/text%3E%3C/svg%3E)  material symbols icon named "tilt_arrow_down" (outlined variation).
+  static const IconData tilt_arrow_down =
+      IconData(0xfff26, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![tilt_arrow_down_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff26;%3C/text%3E%3C/svg%3E)  material symbols icon named "tilt_arrow_down_rounded" (rounded variation).
+  static const IconData tilt_arrow_down_rounded =
+      IconData(0xfff26, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![tilt_arrow_down_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff26;%3C/text%3E%3C/svg%3E)  material symbols icon named "tilt_arrow_down_sharp" (sharp variation).
+  static const IconData tilt_arrow_down_sharp =
+      IconData(0xfff26, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![tilt_arrow_up](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff25;%3C/text%3E%3C/svg%3E)  material symbols icon named "tilt_arrow_up" (outlined variation).
+  static const IconData tilt_arrow_up =
+      IconData(0xfff25, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![tilt_arrow_up_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff25;%3C/text%3E%3C/svg%3E)  material symbols icon named "tilt_arrow_up_rounded" (rounded variation).
+  static const IconData tilt_arrow_up_rounded =
+      IconData(0xfff25, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![tilt_arrow_up_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff25;%3C/text%3E%3C/svg%3E)  material symbols icon named "tilt_arrow_up_sharp" (sharp variation).
+  static const IconData tilt_arrow_up_sharp =
+      IconData(0xfff25, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![time_auto](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf0e4;%3C/text%3E%3C/svg%3E)  material symbols icon named "time_auto" (outlined variation).
   static const IconData time_auto =
       IconData(0xf0e4, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -46316,6 +46920,18 @@ class Symbols {
   ///  ![touch_double_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf38b;%3C/text%3E%3C/svg%3E)  material symbols icon named "touch_double_sharp" (sharp variation).
   static const IconData touch_double_sharp =
       IconData(0xf38b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![touch_double_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff35;%3C/text%3E%3C/svg%3E)  material symbols icon named "touch_double_2" (outlined variation).
+  static const IconData touch_double_2 =
+      IconData(0xfff35, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![touch_double_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff35;%3C/text%3E%3C/svg%3E)  material symbols icon named "touch_double_2_rounded" (rounded variation).
+  static const IconData touch_double_2_rounded =
+      IconData(0xfff35, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![touch_double_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff35;%3C/text%3E%3C/svg%3E)  material symbols icon named "touch_double_2_sharp" (sharp variation).
+  static const IconData touch_double_2_sharp =
+      IconData(0xfff35, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![touch_long](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf38a;%3C/text%3E%3C/svg%3E)  material symbols icon named "touch_long" (outlined variation).
   static const IconData touch_long =
@@ -47721,6 +48337,30 @@ class Symbols {
   static const IconData vacuum_sharp =
       IconData(0xefc5, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![vacuum_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6d;%3C/text%3E%3C/svg%3E)  material symbols icon named "vacuum_2" (outlined variation).
+  static const IconData vacuum_2 =
+      IconData(0xfff6d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![vacuum_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6d;%3C/text%3E%3C/svg%3E)  material symbols icon named "vacuum_2_rounded" (rounded variation).
+  static const IconData vacuum_2_rounded =
+      IconData(0xfff6d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![vacuum_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6d;%3C/text%3E%3C/svg%3E)  material symbols icon named "vacuum_2_sharp" (sharp variation).
+  static const IconData vacuum_2_sharp =
+      IconData(0xfff6d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![vacuum_2_on](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6e;%3C/text%3E%3C/svg%3E)  material symbols icon named "vacuum_2_on" (outlined variation).
+  static const IconData vacuum_2_on =
+      IconData(0xfff6e, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![vacuum_2_on_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6e;%3C/text%3E%3C/svg%3E)  material symbols icon named "vacuum_2_on_rounded" (rounded variation).
+  static const IconData vacuum_2_on_rounded =
+      IconData(0xfff6e, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![vacuum_2_on_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff6e;%3C/text%3E%3C/svg%3E)  material symbols icon named "vacuum_2_on_sharp" (sharp variation).
+  static const IconData vacuum_2_on_sharp =
+      IconData(0xfff6e, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![valve](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe224;%3C/text%3E%3C/svg%3E)  material symbols icon named "valve" (outlined variation).
   static const IconData valve =
       IconData(0xe224, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -47975,15 +48615,15 @@ class Symbols {
 
   ///  ![video_camera_back_add](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf40c;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_camera_back_add" (outlined variation).
   static const IconData video_camera_back_add =
-      IconData(0xf40c, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf40c, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![video_camera_back_add_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf40c;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_camera_back_add_rounded" (rounded variation).
   static const IconData video_camera_back_add_rounded =
-      IconData(0xf40c, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf40c, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![video_camera_back_add_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf40c;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_camera_back_add_sharp" (sharp variation).
   static const IconData video_camera_back_add_sharp =
-      IconData(0xf40c, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xf40c, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![video_camera_front](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf080;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_camera_front" (outlined variation).
   static const IconData video_camera_front =
@@ -48032,6 +48672,30 @@ class Symbols {
   ///  ![video_file_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xeb87;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_file_sharp" (sharp variation).
   static const IconData video_file_sharp =
       IconData(0xeb87, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![video_frame_copy](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0d;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_frame_copy" (outlined variation).
+  static const IconData video_frame_copy =
+      IconData(0xfff0d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![video_frame_copy_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0d;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_frame_copy_rounded" (rounded variation).
+  static const IconData video_frame_copy_rounded =
+      IconData(0xfff0d, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![video_frame_copy_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0d;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_frame_copy_sharp" (sharp variation).
+  static const IconData video_frame_copy_sharp =
+      IconData(0xfff0d, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![video_frame_save](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0c;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_frame_save" (outlined variation).
+  static const IconData video_frame_save =
+      IconData(0xfff0c, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![video_frame_save_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0c;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_frame_save_rounded" (rounded variation).
+  static const IconData video_frame_save_rounded =
+      IconData(0xfff0c, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![video_frame_save_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff0c;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_frame_save_sharp" (sharp variation).
+  static const IconData video_frame_save_sharp =
+      IconData(0xfff0c, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![video_label](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe071;%3C/text%3E%3C/svg%3E)  material symbols icon named "video_label" (outlined variation).
   static const IconData video_label =
@@ -48107,15 +48771,15 @@ class Symbols {
 
   ///  ![videocam](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe04b;%3C/text%3E%3C/svg%3E)  material symbols icon named "videocam" (outlined variation).
   static const IconData videocam =
-      IconData(0xe04b, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe04b, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![videocam_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe04b;%3C/text%3E%3C/svg%3E)  material symbols icon named "videocam_rounded" (rounded variation).
   static const IconData videocam_rounded =
-      IconData(0xe04b, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe04b, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![videocam_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe04b;%3C/text%3E%3C/svg%3E)  material symbols icon named "videocam_sharp" (sharp variation).
   static const IconData videocam_sharp =
-      IconData(0xe04b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe04b, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![videocam_alert](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf390;%3C/text%3E%3C/svg%3E)  material symbols icon named "videocam_alert" (outlined variation).
   static const IconData videocam_alert =
@@ -48407,15 +49071,15 @@ class Symbols {
 
   ///  ![view_quilt](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe8f1;%3C/text%3E%3C/svg%3E)  material symbols icon named "view_quilt" (outlined variation).
   static const IconData view_quilt =
-      IconData(0xe8f1, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe8f1, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![view_quilt_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe8f1;%3C/text%3E%3C/svg%3E)  material symbols icon named "view_quilt_rounded" (rounded variation).
   static const IconData view_quilt_rounded =
-      IconData(0xe8f1, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe8f1, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![view_quilt_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe8f1;%3C/text%3E%3C/svg%3E)  material symbols icon named "view_quilt_sharp" (sharp variation).
   static const IconData view_quilt_sharp =
-      IconData(0xe8f1, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe8f1, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![view_real_size](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf4c2;%3C/text%3E%3C/svg%3E)  material symbols icon named "view_real_size" (outlined variation).
   static const IconData view_real_size =
@@ -48719,15 +49383,15 @@ class Symbols {
 
   ///  ![volume_off](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe04f;%3C/text%3E%3C/svg%3E)  material symbols icon named "volume_off" (outlined variation).
   static const IconData volume_off =
-      IconData(0xe04f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe04f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![volume_off_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe04f;%3C/text%3E%3C/svg%3E)  material symbols icon named "volume_off_rounded" (rounded variation).
   static const IconData volume_off_rounded =
-      IconData(0xe04f, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe04f, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![volume_off_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe04f;%3C/text%3E%3C/svg%3E)  material symbols icon named "volume_off_sharp" (sharp variation).
   static const IconData volume_off_sharp =
-      IconData(0xe04f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+      IconData(0xe04f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![volume_up](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe050;%3C/text%3E%3C/svg%3E)  material symbols icon named "volume_up" (outlined variation).
   static const IconData volume_up =
@@ -48860,6 +49524,18 @@ class Symbols {
   ///  ![vrpano_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf082;%3C/text%3E%3C/svg%3E)  material symbols icon named "vrpano_sharp" (sharp variation).
   static const IconData vrpano_sharp =
       IconData(0xf082, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![walk_bike](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff01;%3C/text%3E%3C/svg%3E)  material symbols icon named "walk_bike" (outlined variation).
+  static const IconData walk_bike =
+      IconData(0xfff01, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+
+  ///  ![walk_bike_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff01;%3C/text%3E%3C/svg%3E)  material symbols icon named "walk_bike_rounded" (rounded variation).
+  static const IconData walk_bike_rounded =
+      IconData(0xfff01, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
+
+  ///  ![walk_bike_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff01;%3C/text%3E%3C/svg%3E)  material symbols icon named "walk_bike_sharp" (sharp variation).
+  static const IconData walk_bike_sharp =
+      IconData(0xfff01, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow', matchTextDirection: true);
 
   ///  ![wall_art](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xefcb;%3C/text%3E%3C/svg%3E)  material symbols icon named "wall_art" (outlined variation).
   static const IconData wall_art =
@@ -49076,6 +49752,18 @@ class Symbols {
   ///  ![watch_arrow_down_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfffcf;%3C/text%3E%3C/svg%3E)  material symbols icon named "watch_arrow_down_sharp" (sharp variation).
   static const IconData watch_arrow_down_sharp =
       IconData(0xfffcf, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![watch_button](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff20;%3C/text%3E%3C/svg%3E)  material symbols icon named "watch_button" (outlined variation).
+  static const IconData watch_button =
+      IconData(0xfff20, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![watch_button_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff20;%3C/text%3E%3C/svg%3E)  material symbols icon named "watch_button_rounded" (rounded variation).
+  static const IconData watch_button_rounded =
+      IconData(0xfff20, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![watch_button_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff20;%3C/text%3E%3C/svg%3E)  material symbols icon named "watch_button_sharp" (sharp variation).
+  static const IconData watch_button_sharp =
+      IconData(0xfff20, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![watch_button_press](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xf6aa;%3C/text%3E%3C/svg%3E)  material symbols icon named "watch_button_press" (outlined variation).
   static const IconData watch_button_press =
@@ -49509,6 +50197,18 @@ class Symbols {
   static const IconData wb_twilight_sharp =
       IconData(0xe1c6, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
+  ///  ![wb_twilight_2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff1f;%3C/text%3E%3C/svg%3E)  material symbols icon named "wb_twilight_2" (outlined variation).
+  static const IconData wb_twilight_2 =
+      IconData(0xfff1f, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![wb_twilight_2_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff1f;%3C/text%3E%3C/svg%3E)  material symbols icon named "wb_twilight_2_rounded" (rounded variation).
+  static const IconData wb_twilight_2_rounded =
+      IconData(0xfff1f, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![wb_twilight_2_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff1f;%3C/text%3E%3C/svg%3E)  material symbols icon named "wb_twilight_2_sharp" (sharp variation).
+  static const IconData wb_twilight_2_sharp =
+      IconData(0xfff1f, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
   ///  ![wc](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe63d;%3C/text%3E%3C/svg%3E)  material symbols icon named "wc" (outlined variation).
   static const IconData wc =
       IconData(0xe63d, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
@@ -49557,17 +50257,17 @@ class Symbols {
   static const IconData weather_snowy_sharp =
       IconData(0xe2cd, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![web](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe051;%3C/text%3E%3C/svg%3E)  material symbols icon named "web" (outlined variation).
+  ///  ![web](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe681;%3C/text%3E%3C/svg%3E)  material symbols icon named "web" (outlined variation).
   static const IconData web =
-      IconData(0xe051, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe681, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![web_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe051;%3C/text%3E%3C/svg%3E)  material symbols icon named "web_rounded" (rounded variation).
+  ///  ![web_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe681;%3C/text%3E%3C/svg%3E)  material symbols icon named "web_rounded" (rounded variation).
   static const IconData web_rounded =
-      IconData(0xe051, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe681, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
 
-  ///  ![web_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe051;%3C/text%3E%3C/svg%3E)  material symbols icon named "web_sharp" (sharp variation).
+  ///  ![web_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe681;%3C/text%3E%3C/svg%3E)  material symbols icon named "web_sharp" (sharp variation).
   static const IconData web_sharp =
-      IconData(0xe051, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+      IconData(0xe681, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![web_asset](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xe069;%3C/text%3E%3C/svg%3E)  material symbols icon named "web_asset" (outlined variation).
   static const IconData web_asset =
@@ -49964,6 +50664,18 @@ class Symbols {
   ///  ![wifi_channel_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xeb6a;%3C/text%3E%3C/svg%3E)  material symbols icon named "wifi_channel_sharp" (sharp variation).
   static const IconData wifi_channel_sharp =
       IconData(0xeb6a, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![wifi_device](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff34;%3C/text%3E%3C/svg%3E)  material symbols icon named "wifi_device" (outlined variation).
+  static const IconData wifi_device =
+      IconData(0xfff34, fontFamily: 'MaterialSymbolsOutlined', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![wifi_device_rounded](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Rounded';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff34;%3C/text%3E%3C/svg%3E)  material symbols icon named "wifi_device_rounded" (rounded variation).
+  static const IconData wifi_device_rounded =
+      IconData(0xfff34, fontFamily: 'MaterialSymbolsRounded', fontPackage: 'material_symbols_icons_flow');
+
+  ///  ![wifi_device_sharp](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Sharp';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xfff34;%3C/text%3E%3C/svg%3E)  material symbols icon named "wifi_device_sharp" (sharp variation).
+  static const IconData wifi_device_sharp =
+      IconData(0xfff34, fontFamily: 'MaterialSymbolsSharp', fontPackage: 'material_symbols_icons_flow');
 
   ///  ![wifi_find](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Cdefs%3E%3Cstyle%20type='text/css'%3Etext{font-family:'Material%20Symbols%20Outlined';font-size:32px;text-anchor:middle;dominant-baseline:text-bottom;fill:grey;}%3C/style%3E%3C/defs%3E%3Ctext%20x='50%'%20y='100%'%3E&%23xeb31;%3C/text%3E%3C/svg%3E)  material symbols icon named "wifi_find" (outlined variation).
   static const IconData wifi_find =

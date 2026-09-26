@@ -1,3 +1,10 @@
+## 4.2960.0 (flow-mn fork)
+
+Synced with upstream `material_symbols_icons` 4.2960.0 (Material Symbols fonts
+2.960, 4264 icons) plus upstream's `forceCompileTimeTreeShaking` fixes for
+dart2wasm/dart2js. Fork changes are unchanged: package renamed and every
+`fontPackage` set to `material_symbols_icons_flow`.
+
 ## 4.2928.1 (flow-mn fork)
 
 Fork of `material_symbols_icons` 4.2928.1 (upstream by Tim Maffett), renamed to
@@ -5,6 +12,62 @@ Fork of `material_symbols_icons` 4.2928.1 (upstream by Tim Maffett), renamed to
 unchanged from upstream.
 
 # Changelog for Material Symbols Icons package
+
+## 4.2960.0
+
+* Update to version 2.960 of the material icons variable fonts 'released' 07/16/2026 with 4264 icons.
+* Added ffef0  # dropdown_menu, ffef1  # eyeglasses_3, ffedb  # jewelry,
+  ffee2  # reset_colors, ffeda  # seat_read, ffee1  # seat_window,
+  ffedf  # settings_screen, ffee4  # sign_language_off, ffede  # snail
+* Corrected RTL auto-mirroring (`matchTextDirection`) for 35 icons that are no longer
+  auto-mirrored in the official Material Symbols sources: battery_unknown, bike_lane,
+  branding_watermark, content_copy, content_cut, contrast, desktop_landscape,
+  desktop_landscape_add, desktop_portrait, devices_other, diagonal_line, featured_video,
+  flag (and its aliases assistant_photo, emoji_flags, flag_filled, outlined_flag),
+  float_landscape_2, float_portrait_2, grading, highlight_mouse_cursor, hotel_class,
+  line_curve, picture_in_picture, picture_in_picture_alt, picture_in_picture_large,
+  picture_in_picture_medium, picture_in_picture_mobile, picture_in_picture_small,
+  position_top_right, star_half, video_camera_back_add, videocam, view_quilt, volume_off
+* Fixed the generator's `update_metadata.dart` RTL auto-mirroring detection: incremental runs
+  now merge detection results with the previous run's list instead of overwriting it, and icons
+  can correctly lose their auto-mirrored status when Google removes it (this is what surfaced
+  the 35 icon corrections above).
+
+## 4.2951.0
+
+* Update to version 2.951 of the material icons variable fonts 'released' 06/11/2026 with 4255 icons.
+* Changed # e990 add_circle (was e3ba)  # e990 add_circle_outlinee (was e3ba),
+  ef87  # article (was ef42), e72c  # category (was e574),
+  e668  # check (was e5ca), e9de  # check_box (was e834),
+  ef80  # child_friendly (was eb42), e990  # control_point (was e3ba)
+  e674  # draft (was e66d), e6a6  # image_aspect_ratio (was e3f5),
+  e674  # insert_drive_file (was e66d), f027  # keep. (was f026),
+  f027  # keep_pin (was f026), ea07  # language (was e894),
+  e677  # list_alt (was e0ee), e684  # movie (was e404),
+  e684  # movie_creation (was e404), e674  # note (was e66d),
+  e691  # panorama (was e40b), e693  # photo (was e432),
+  e693  # photo_size_select_actual (was e432),
+  efb4  # priority (was e19f), ef7a  # search (was e8b6),
+  e681  # web (was e051)
+* Added fff0e  # twod_2, fff0f  # threed_2, fff03  # audio_capture,
+  fff3e  # battery_charging_20_2, fff3d  # battery_charging_30_2,
+  fff3c  # battery_charging_50_2, fff3b  # battery_charging_60_2,
+  fff3a  # battery_charging_80_2, fff39  # battery_charging_full_2,
+  fff78  # blinds_2, fff79  # blinds_2_closed, fff6a  # bolt_boost,
+  fff40  # car_fan_recirculate_2, fff0a  # crop_21_9,
+  fff0b  # crop_2_3, ffee9  # dashboard_2_add, e676  # drive_file_rename,
+  fffc5  # fitbit_raquetball, fff77  # garage_door_open, ffeea  # id_card_2,
+  fff14  # ink_highlighter_off, fff76  # light_group_2, fff00  # light_mode_auto,
+  fff75  # lightstrip, fff33  # list_arrow, f2e0  # mobile_dock,
+  fff2e  # pin_history, fff2d  # pin_road, ffeeb  # pin_road_2,
+  fff73  # shades, fff74  # shades_closed, fff30  # shield_card,
+  fff2f  # shield_radar, fff72  # soundbar, fff71  # speaker_2,
+  fff38  # speed_2, fff37  # speed_3, fff36  # speed_4, ffef7  # split_scene_2,
+  fff70  # subwoofer, fff6f  # switch_off, fff26  # tilt_arrow_down,
+  fff25  # tilt_arrow_up, fff35  # touch_double_2, fff6d  # vacuum_2,
+  fff6e  # vacuum_2_on, fff0d  # video_frame_copy, fff0c  # video_frame_save,
+  fff01  # walk_bike, fff20  # watch_button, fff1f  # wb_twilight_2,
+  fff34  # wifi_device
 
 ## 4.2928.1
 
